@@ -14,6 +14,46 @@
   font-weight: 400;
 }
 
+$ds100: #1f2041;
+$ds75: rgba(31, 32, 65, 0.75);
+$ds50: rgba(31, 32, 65, 0.5);
+$ds25: rgba(31, 32, 65, 0.25);
+$ds5: rgba(31, 32, 65, 0.05);
+$purple: #bc9cff;
+$green: #6fcf97;
+
+%h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: $ds100;
+}
+
+%h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: $ds100;
+}
+
+%h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $ds100;
+}
+
+%body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $ds75;
+}
+
 *,
 *::before,
 *::after {
@@ -24,4 +64,106 @@ body {
   margin: 0;
 
   font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.container {
+}
+.logo {
+  margin: 30px 0 0 30px;
+  &__icon {
+  }
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors {
+  width: 100%;
+  max-width: 282px;
+  margin: 145px 150px;
+
+  &__element {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  &__block {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 6px;
+  }
+  &__text {
+    margin-left: 40px;
+  }
+  &__name {
+    @extend %h2;
+  }
+  &__code {
+    @extend %h2;
+    font-weight: 400;
+  }
+}
+.ds100 {
+  background-color: $ds100;
+}
+.ds75 {
+  background-color: $ds75;
+}
+.ds50 {
+  background-color: $ds50;
+}
+.ds25 {
+  background-color: $ds25;
+}
+.ds5 {
+  background-color: $ds5;
+}
+.purple {
+  background-color: $purple;
+}
+.green {
+  background-color: $green;
+}
+
+.types {
+  width: 100%;
+  max-width: 436px;
+  margin: 145px 150px;
+
+  &__element {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  &__name {
+    display: block;
+    text-align: right;
+    width: 100%;
+    max-width: 37px;
+
+    margin-right: 30px;
+
+    color: $ds25;
+
+    font-weight: 400;
+  }
+  &__text {
+    width: 100%;
+    min-width: 369px;
+  }
+}
+.h1 {
+  @extend %h1;
+}
+.h2 {
+  @extend %h2;
+}
+.h3 {
+  @extend %h3;
+}
+.body {
+  @extend %body;
 }

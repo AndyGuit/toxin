@@ -78,133 +78,56 @@ body {
   }
 }
 .content {
-  display: flex;
-  justify-content: space-between;
+  margin: 62px 140px 132px 140px;
 }
 
-.colors {
+.text-fields {
   width: 100%;
-  max-width: 282px;
-  margin: 145px 150px;
-
+  max-width: 320px;
   &__element {
+    margin-top: 20px;
+  }
+  &__title {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-  }
-  &__block {
-    width: 70px;
-    height: 70px;
 
-    border-radius: 6px;
-  }
-  &__text {
-    margin-left: 40px;
-  }
-  &__name {
-    @extend %h2;
-  }
-  &__code {
-    @extend %h2;
-    font-weight: 400;
-  }
-}
-.ds100 {
-  background-color: $ds100;
-}
-.ds75 {
-  background-color: $ds75;
-}
-.ds50 {
-  background-color: $ds50;
-}
-.ds25 {
-  background-color: $ds25;
-}
-.ds5 {
-  background-color: $ds5;
-}
-.purple {
-  background-color: $purple;
-}
-.green {
-  background-color: $green;
-}
+    margin-bottom: 5px;
+    p {
+      margin: 0;
 
-.types {
+      @extend %h3;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $ds50;
+    }
+    label {
+      @extend %h3;
+      text-transform: uppercase;
+    }
+  }
+}
+.input-field {
   width: 100%;
-  max-width: 436px;
-  margin: 145px 150px;
+  height: 44px;
+  padding: 13px 15px;
 
-  &__element {
-    display: flex;
-    margin-bottom: 50px;
-  }
-  &__name {
-    display: block;
-    text-align: right;
-    width: 100%;
-    max-width: 37px;
+  border-radius: 4px;
+  border: 1px solid $ds25;
 
-    margin-right: 30px;
-
-    color: $ds25;
-
-    font-weight: 400;
-  }
-  &__text {
-    width: 100%;
-    max-width: 369px;
-  }
-}
-.h1 {
-  @extend %h1;
-}
-.h2 {
-  @extend %h2;
-}
-.h3 {
   @extend %h3;
-}
-.body {
-  @extend %body;
-}
-
-@media (max-width: 1300px) {
-  .logo {
-    display: none;
-  }
-  .colors {
-    margin: 45px 50px;
-
-    &__block {
-      flex-shrink: 0;
-    }
-  }
-  .types {
-    margin: 45px 50px;
+  font-weight: 400;
+  line-height: 18px;
+  :hover,
+  :focus {
+    outline: none;
+    border: 1px solid $ds50;
   }
 }
-@media (max-width: 655px) {
-  .content {
-    flex-direction: column;
-  }
-  .colors {
-    margin: 0;
-    padding: 15px 10px;
-  }
-  .types {
-    padding: 15px 10px;
-    margin: 0;
-    &__element {
-      margin-bottom: 20px;
-    }
-    &__name {
-      display: flex;
 
-      margin-right: 5px;
-    }
-    &__text {
-    }
-  }
+.active-text-field {
+  outline: none;
+  border: 1px solid $ds50;
+
+  color: $ds75;
 }

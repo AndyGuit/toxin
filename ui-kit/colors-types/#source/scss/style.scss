@@ -176,6 +176,10 @@ body {
   }
   .colors {
     margin: 45px 50px;
+
+    &__block {
+      flex-shrink: 0;
+    }
   }
   .types {
     margin: 45px 50px;
@@ -186,10 +190,11 @@ body {
     flex-direction: column;
   }
   .colors {
-    margin: 15px 10px;
+    margin: 0;
+    padding: 15px 10px;
   }
   .types {
-    padding: 15px 10px 15px 10px;
+    padding: 15px 10px;
     margin: 0;
     &__element {
       margin-bottom: 20px;

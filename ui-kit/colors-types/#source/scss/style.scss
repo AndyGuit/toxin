@@ -69,6 +69,8 @@ body {
 }
 
 .container {
+  width: 100%;
+  max-width: 1440px;
 }
 .logo {
   margin: 30px 0 0 30px;
@@ -152,7 +154,7 @@ body {
   }
   &__text {
     width: 100%;
-    min-width: 369px;
+    max-width: 369px;
   }
 }
 .h1 {
@@ -166,4 +168,37 @@ body {
 }
 .body {
   @extend %body;
+}
+
+@media (max-width: 1300px) {
+  .logo {
+    display: none;
+  }
+  .colors {
+    margin: 45px 50px;
+  }
+  .types {
+    margin: 45px 50px;
+  }
+}
+@media (max-width: 655px) {
+  .content {
+    flex-direction: column;
+  }
+  .colors {
+    margin: 15px 10px;
+  }
+  .types {
+    margin: 15px 10px 15px 10px;
+    &__element {
+      margin-bottom: 20px;
+    }
+    &__name {
+      display: flex;
+
+      margin-right: 5px;
+    }
+    &__text {
+    }
+  }
 }

@@ -125,6 +125,14 @@ body {
   }
 }
 
+.dropdown {
+  appearance: none;
+}
+
+.dropdown:after {
+  content: "";
+}
+
 .active-text-field {
   outline: none;
   border: 1px solid $ds50;

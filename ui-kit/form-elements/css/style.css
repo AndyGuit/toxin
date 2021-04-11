@@ -90,14 +90,56 @@ body {
 .dropdown {
   -webkit-appearance: none;
           appearance: none;
+  font-family: inherit;
+  display: inline-block;
+  position: relative;
 }
 
-.dropdown:after {
+.dropdown::after {
   content: "";
+  width: 44px;
+  height: 44px;
+  background: url("../img/dropdown_arrow.svg") 0 0 no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: inline-block;
 }
 
 .active-text-field {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.75);
+}
+
+.date-dropdown__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-dropdown__element {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.date-dropdown__element:last-child {
+  margin: 0;
+}
+
+.filter-date-dropdown {
+  width: 100%;
+  max-width: 266px;
+}
+
+.subscription {
+  width: 100%;
+  max-width: 266px;
+  position: relative;
+}
+
+.subscription::after {
+  content: url(../../img/arrow_forward_purple.svg);
+  position: absolute;
+  top: 33px;
+  right: 12px;
 }

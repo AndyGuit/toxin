@@ -48,10 +48,43 @@
 
         <div class="text-fields__element">
           <div class="text-fields__title">
-            <label for="email-field">Masked Text field</label>
+            <label for="date-field">Masked Text field</label>
             <p>default</p>
           </div>
-          <input class="input-field" type="date" name="date" id="date-field" placeholder="ДД.ММ.ГГГГ">
+          <input class="input-field masked-text-field" type="date" name="date" id="date-field" placeholder="ДД.ММ.ГГГГ">
+        </div>
+
+        <div class="text-fields__element">
+
+          <div class="date-dropdown__block">
+            <div class="date-dropdown__element">
+              <div class="text-fields__title">
+              <label for="email-field">date dropdown</label>
+            </div>
+            <input class="input-field" type="date" name="date" id="date-field" placeholder="ДД.ММ.ГГГГ">
+            </div>
+
+            <div class="date-dropdown__element">
+              <div class="text-fields__title">
+              <label for="email-field">date dropdown</label>
+            </div>
+            <input class="input-field" type="date" name="date" id="date-field" placeholder="ДД.ММ.ГГГГ" value="2019-08-19">
+            </div>
+          </div>
+        </div>
+
+        <div class="text-fields__element filter-date-dropdown">
+          <div class="text-fields__title">
+            <label for="filter-date">filter date dropdown</label>
+          </div>
+          <input class="input-field" type="text" name="filter-date" id="filter-date" placeholder="" value="19 авг - 23 авг">
+        </div>
+
+        <div class="text-fields__element subscription">
+          <div class="text-fields__title">
+            <label for="email-field">subscription text field</label>
+          </div> 
+          <input class="input-field" type="email" name="email" id="email-field" placeholder="Email">
         </div>
 
       </div> <!-- text-fields -->

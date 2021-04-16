@@ -26,7 +26,7 @@
   color: #1f2041;
 }
 
-.h3 {
+.h3, .input-element__head, .input-element__text {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 12px;
@@ -34,7 +34,7 @@
   color: #1f2041;
 }
 
-.body {
+.body, .input-element__textfield, .input-element__textfield::placeholder {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
@@ -188,4 +188,95 @@ body {
 }
 
 /* Form Elements
-// ==================== */
+==================== */
+.input-section {
+  margin-left: 141px;
+  margin-top: 85px;
+}
+
+.input-element {
+  margin-bottom: 20px;
+}
+
+.input-element__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.input-element__head {
+  text-transform: uppercase;
+}
+
+.input-element__text {
+  color: rgba(31, 32, 65, 0.5);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.input-element__field {
+  width: 320px;
+  height: 44px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.input-element__field:hover, .input-element__field:focus {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.input-element__textfield {
+  color: rgba(31, 32, 65, 0.75);
+  margin: 13px 5px 13px 15px;
+  width: 100%;
+  border: none;
+}
+
+.input-element__textfield:hover, .input-element__textfield:focus {
+  outline: none;
+}
+
+.input-element__textfield::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  line-height: 14px;
+}
+
+.input-element__btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  color: #fff;
+  background: transparent;
+}
+
+.input-element__date-drop {
+  width: 150px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.hover-focus {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-element-small {
+  margin-top: 40px;
+}
+
+.small {
+  width: 266px;
+}

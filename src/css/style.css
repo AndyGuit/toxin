@@ -26,7 +26,7 @@
   color: #1f2041;
 }
 
-.h3, .input-element__head, .input-element__text {
+.h3, .input-element__head, .input-element__text, .expandable-checkbox__header {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 12px;
@@ -34,7 +34,7 @@
   color: #1f2041;
 }
 
-.body, .input-element__textfield, .input-element__textfield::placeholder, .dropdown-list__element span {
+.body, .input-element__textfield, .input-element__textfield::placeholder, .dropdown-list__element span, .expandable-checkbox__head:checked ~ .expandable-checkbox__list, .expandable-checkbox__list {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
@@ -341,4 +341,66 @@ ul {
 .dropdown-list__btn-minus {
   position: relative;
   bottom: 3px;
+}
+
+.expandable-checkbox__header {
+  text-transform: uppercase;
+  width: 266px;
+}
+
+.expandable-checkbox__header:after {
+  content: url("../../static/img/dropdown_arrow.svg");
+  margin: 47px;
+}
+
+.expandable-checkbox__head {
+  display: none;
+}
+
+.expandable-checkbox__head:checked ~ .expandable-checkbox__list {
+  height: 233px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.25);
+  text-transform: none;
+}
+
+.expandable-checkbox__head:checked ~ .expandable-checkbox__header:after {
+  content: url("../../static/img/dropdown_arrow.svg");
+  display: inline-block;
+  transform: content rotateY(180deg);
+}
+
+.expandable-checkbox__btn {
+  margin-left: 30px;
+}
+
+.expandable-checkbox__list {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.expandable-checkbox__element:hover ~ span {
+  border: 1px solid #1f2041;
+}
+
+.expandable-checkbox__checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.expandable-checkbox__new-checkbox {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
 }

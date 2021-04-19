@@ -192,6 +192,8 @@ body {
 .input-section {
   margin-left: 141px;
   margin-top: 85px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .input-element {
@@ -281,6 +283,8 @@ body {
   width: 266px;
 }
 
+/* dropdown section 
+===================*/
 .dropdown-section {
   margin-top: 100px;
 }
@@ -343,18 +347,21 @@ ul {
   bottom: 3px;
 }
 
-.expandable-checkbox__header {
-  text-transform: uppercase;
-  width: 266px;
+/* expandable-checkbox 
+=======================*/
+.expandable-checkbox {
+  margin-top: 55px;
 }
 
-.expandable-checkbox__header:after {
-  content: url("../../static/img/dropdown_arrow.svg");
-  margin: 47px;
+.expandable-checkbox__header {
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .expandable-checkbox__head {
-  display: none;
+  margin-left: 44px;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .expandable-checkbox__head:checked ~ .expandable-checkbox__list {
@@ -364,43 +371,49 @@ ul {
   text-transform: none;
 }
 
-.expandable-checkbox__head:checked ~ .expandable-checkbox__header:after {
-  content: url("../../static/img/dropdown_arrow.svg");
-  display: inline-block;
-  transform: content rotateY(180deg);
+.expandable-checkbox__head:checked ~ .expandable-checkbox__btn {
+  transform: rotate(180deg);
 }
 
 .expandable-checkbox__btn {
-  margin-left: 30px;
+  margin-left: -20px;
+  transition: rotate 0.2s;
 }
 
 .expandable-checkbox__list {
   height: 0;
   overflow: hidden;
-  transition: height 0.2s;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.25);
+  margin-top: 18px;
 }
 
-.expandable-checkbox__element:hover ~ span {
-  border: 1px solid #1f2041;
+.expandable-checkbox__element {
+  display: inline-flex;
+  width: 100%;
+  max-width: 266px;
 }
 
 .expandable-checkbox__checkbox {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.expandable-checkbox__checkbox:checked ~ .expandable-checkbox__new-checkbox {
+  background-image: url(../../static/img/check-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: #bc9cff;
 }
 
 .expandable-checkbox__new-checkbox {
-  position: relative;
   display: inline-block;
-  top: 0;
-  left: 0;
   height: 20px;
   width: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+  margin: 0 10px 10px 0;
 }

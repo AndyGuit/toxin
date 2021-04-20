@@ -344,8 +344,6 @@ ul {
     position: relative;
     bottom: 3px;
   }
-
-  &__value {}
 }
 
 
@@ -410,6 +408,9 @@ ul {
 
     height: 20px;
     width: 20px;
+
+    margin-top: 0;
+    margin-left: 0;
     &:checked~.expandable-checkbox__new-checkbox {
       background-image: url(../../static/img/check-icon.svg);
       background-repeat: no-repeat;
@@ -425,5 +426,174 @@ ul {
     border: 1px solid $ds25;
     border-radius: 4px;
     margin: 0 10px 10px 0;
+    flex-shrink: 0;
+  }
+}
+
+
+
+/* specials 
+=========================*/
+
+.specials {
+  margin-bottom: 132px;
+  margin-top: 41px;
+
+  width: 100%;
+  max-width: 280px;
+
+  
+  &__element {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
+    padding-bottom: 17px;
+
+    &:last-child {
+      padding-top: 23px;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  &__description {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &__header {
+    @extend %body;
+    font-weight: 700;
+
+    margin: 0;
+  }
+
+  &__text {
+    @extend %body;
+
+    margin: 0;
+  }
+}
+
+
+
+/* middle section
+================= */
+
+.middle-section {
+  margin-right: 72px;
+  margin-left: 126px;
+
+}
+
+
+/* checkbox buttons
+================== */
+
+.checkbox-buttons {
+  margin-top: 88px;
+  width: 100%;
+  max-width: 222px;
+
+  &__list {
+    height: 100%;
+    max-height: 129px;
+  }
+}
+
+
+/* radio buttons
+================ */
+
+.radio-buttons {
+  margin-top: 40px;
+
+  &__head {
+    @extend %h3;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+  }
+
+  &__element {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__container {
+  }
+
+  & input {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 0;
+  }
+
+
+  & input:checked~.radio-buttons__btn{
+    border-color: $purple;
+    background-image: url("../../static/img/dot_purple.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $ds25;
+    border-radius: 50%;
+
+    margin-right: 10px;
+  }
+
+  &__label {
+    @extend %body;
+
+    padding-right: 17px;
+  }
+}
+
+.toggle {
+  &__head {}
+
+  &__element {
+    display: inline-flex;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 20px;
+
+    border: 1px solid $ds25;
+    border-radius: 10px;
+
+    flex-shrink: 0;
+  }
+
+  &__checkbox {
+    position: absolute;
+
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0;
+    margin-top: 0;
+
+    opacity: 0;
+  }
+
+  &__dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: $ds25;
+    border-radius: 50%;
+    margin: 4px 24px 4px 4px;
   }
 }

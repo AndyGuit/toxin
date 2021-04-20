@@ -26,7 +26,7 @@
   color: #1f2041;
 }
 
-.h3, .input-element__head, .input-element__text, .expandable-checkbox__header {
+.h3, .input-element__head, .input-element__text, .expandable-checkbox__header, .radio-buttons__head {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 12px;
@@ -34,7 +34,7 @@
   color: #1f2041;
 }
 
-.body, .input-element__textfield, .input-element__textfield::placeholder, .dropdown-list__element span, .expandable-checkbox__head:checked ~ .expandable-checkbox__list, .expandable-checkbox__list {
+.body, .input-element__textfield, .input-element__textfield::placeholder, .dropdown-list__element span, .expandable-checkbox__head:checked ~ .expandable-checkbox__list, .expandable-checkbox__list, .specials__header, .specials__text, .radio-buttons__label {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
@@ -400,6 +400,8 @@ ul {
   cursor: pointer;
   height: 20px;
   width: 20px;
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .expandable-checkbox__checkbox:checked ~ .expandable-checkbox__new-checkbox {
@@ -416,4 +418,137 @@ ul {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   margin: 0 10px 10px 0;
+  flex-shrink: 0;
+}
+
+/* specials 
+=========================*/
+.specials {
+  margin-bottom: 132px;
+  margin-top: 41px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.specials__element {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding-bottom: 17px;
+}
+
+.specials__element:last-child {
+  padding-top: 23px;
+}
+
+.specials__img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.specials__description {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.specials__header {
+  font-weight: 700;
+  margin: 0;
+}
+
+.specials__text {
+  margin: 0;
+}
+
+/* middle section
+================= */
+.middle-section {
+  margin-right: 72px;
+  margin-left: 126px;
+}
+
+/* checkbox buttons
+================== */
+.checkbox-buttons {
+  margin-top: 88px;
+  width: 100%;
+  max-width: 222px;
+}
+
+.checkbox-buttons__list {
+  height: 100%;
+  max-height: 129px;
+}
+
+/* radio buttons
+================ */
+.radio-buttons {
+  margin-top: 40px;
+}
+
+.radio-buttons__head {
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.radio-buttons__element {
+  display: inline-flex;
+  align-items: center;
+}
+
+.radio-buttons input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+
+.radio-buttons input:checked ~ .radio-buttons__btn {
+  border-color: #bc9cff;
+  background-image: url("../../static/img/dot_purple.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio-buttons__btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.radio-buttons__label {
+  padding-right: 17px;
+}
+
+.toggle__element {
+  display: inline-flex;
+}
+
+.toggle__btn {
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.toggle__checkbox {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+
+.toggle__dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  margin: 4px 24px 4px 4px;
 }

@@ -399,6 +399,10 @@ ul {
     display: inline-flex;
     width: 100%;
     max-width: 266px;
+
+    & label {
+      cursor: pointer;
+    }
   }
 
   &__checkbox {
@@ -456,6 +460,8 @@ ul {
   &__img {
     display: inline-block;
     vertical-align: bottom;
+
+    margin-left: 6px;
   }
 
   &__description {
@@ -531,6 +537,8 @@ ul {
     margin-left: 0;
     margin-top: 0;
     opacity: 0;
+
+    cursor: pointer;
   }
 
 
@@ -556,14 +564,34 @@ ul {
     @extend %body;
 
     padding-right: 17px;
+    
+    cursor: pointer;
   }
 }
 
+
+/* toggle buttons
+================== */
+
 .toggle {
-  &__head {}
+  margin-top: 40px;
+
+  width: 100%;
+  max-width: 260px;
+
+  height: 89px;
+
+  &__head {
+    text-transform: uppercase;
+    @extend %h3;
+    margin: 0;
+  }
 
   &__element {
     display: inline-flex;
+    align-items: center;
+
+    margin-top: 10px;
   }
 
   &__btn {
@@ -574,6 +602,8 @@ ul {
     border-radius: 10px;
 
     flex-shrink: 0;
+
+    transition: all 0.3s ease-out;
   }
 
   &__checkbox {
@@ -586,14 +616,119 @@ ul {
     margin-top: 0;
 
     opacity: 0;
+
+    z-index: 1;
+
+    cursor: pointer;
+
+    &:checked+.toggle__btn {
+      border-color: $purple;
+    }
+
+    &:checked~.toggle__dot {
+      background-color: #bc9cff;
+      margin: 4px 4px 4px 24px;
+    }
   }
 
   &__dot {
-    display: block;
+    position: absolute;
+
     width: 12px;
     height: 12px;
+
     background-color: $ds25;
     border-radius: 50%;
+
     margin: 4px 24px 4px 4px;
+
+    transition: all 0.3s ease-out;
+  }
+
+  &__label {
+    margin-left: 10px;
+    @extend %body;
+
+    cursor: pointer;
+  }
+}
+
+
+/* like button
+====================== */
+.like-button {
+  margin-top: 40px;
+
+  &__head {
+    text-transform: uppercase;
+    @extend %h3;
+
+    margin: 0;
+  }
+
+  &__element {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 16px;
+    margin-right: 10px;
+  }
+
+  &__checkbox {
+    position: absolute;
+
+    width: 40px;
+    height: 20px;
+
+    margin-left: 0;
+    margin-top: 0;
+
+    opacity: 0;
+    z-index: 1;
+
+    cursor: pointer;
+
+    &:hover+.like-button__border {
+      border: 1px solid $purple;
+    }
+
+    &:checked+.like-button__border {
+      border: 1px solid $purple;
+    }
+
+    &:checked~.like-button__heart {
+      background-image: url("../../static/img/heart-purple.svg");
+    }
+
+    &:checked~.like-button__number {
+      color: $purple;
+    }
+  }
+
+  &__border {
+    width: 40px;
+    height: 20px;
+
+    border: 1px solid $ds25;
+    border-radius: 10px;
+  }
+
+  &__heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../static/img/heart-grey.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__number {
+    position: absolute;
+    margin-left: 22px;
+
+    @extend %body;
+    font-size: 10px;
+    line-height: 12px;
+    color: $ds25;
   }
 }

@@ -26,7 +26,7 @@
   color: #1f2041;
 }
 
-.h3, .input-element__head, .input-element__text, .expandable-checkbox__header, .radio-buttons__head {
+.h3, .input-element__head, .input-element__text, .expandable-checkbox__header, .radio-buttons__head, .toggle__head, .like-button__head {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 12px;
@@ -34,7 +34,7 @@
   color: #1f2041;
 }
 
-.body, .input-element__textfield, .input-element__textfield::placeholder, .dropdown-list__element span, .expandable-checkbox__head:checked ~ .expandable-checkbox__list, .expandable-checkbox__list, .specials__header, .specials__text, .radio-buttons__label {
+.body, .input-element__textfield, .input-element__textfield::placeholder, .dropdown-list__element span, .expandable-checkbox__head:checked ~ .expandable-checkbox__list, .expandable-checkbox__list, .specials__header, .specials__text, .radio-buttons__label, .toggle__label, .like-button__number {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
@@ -394,6 +394,10 @@ ul {
   max-width: 266px;
 }
 
+.expandable-checkbox__element label {
+  cursor: pointer;
+}
+
 .expandable-checkbox__checkbox {
   position: absolute;
   opacity: 0;
@@ -442,6 +446,7 @@ ul {
 .specials__img {
   display: inline-block;
   vertical-align: bottom;
+  margin-left: 6px;
 }
 
 .specials__description {
@@ -501,6 +506,7 @@ ul {
   margin-left: 0;
   margin-top: 0;
   opacity: 0;
+  cursor: pointer;
 }
 
 .radio-buttons input:checked ~ .radio-buttons__btn {
@@ -521,10 +527,27 @@ ul {
 
 .radio-buttons__label {
   padding-right: 17px;
+  cursor: pointer;
+}
+
+/* toggle buttons
+================== */
+.toggle {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 260px;
+  height: 89px;
+}
+
+.toggle__head {
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .toggle__element {
   display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .toggle__btn {
@@ -533,6 +556,7 @@ ul {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 10px;
   flex-shrink: 0;
+  transition: all 0.3s ease-out;
 }
 
 .toggle__checkbox {
@@ -542,13 +566,99 @@ ul {
   margin-left: 0;
   margin-top: 0;
   opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.toggle__checkbox:checked + .toggle__btn {
+  border-color: #bc9cff;
+}
+
+.toggle__checkbox:checked ~ .toggle__dot {
+  background-color: #bc9cff;
+  margin: 4px 4px 4px 24px;
 }
 
 .toggle__dot {
-  display: block;
+  position: absolute;
   width: 12px;
   height: 12px;
   background-color: rgba(31, 32, 65, 0.25);
   border-radius: 50%;
   margin: 4px 24px 4px 4px;
+  transition: all 0.3s ease-out;
+}
+
+.toggle__label {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* like button
+====================== */
+.like-button {
+  margin-top: 40px;
+}
+
+.like-button__head {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.like-button__element {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-right: 10px;
+}
+
+.like-button__checkbox {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.like-button__checkbox:hover + .like-button__border {
+  border: 1px solid #bc9cff;
+}
+
+.like-button__checkbox:checked + .like-button__border {
+  border: 1px solid #bc9cff;
+}
+
+.like-button__checkbox:checked ~ .like-button__heart {
+  background-image: url("../../static/img/heart-purple.svg");
+}
+
+.like-button__checkbox:checked ~ .like-button__number {
+  color: #bc9cff;
+}
+
+.like-button__border {
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+}
+
+.like-button__heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../static/img/heart-grey.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.like-button__number {
+  position: absolute;
+  margin-left: 22px;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(31, 32, 65, 0.25);
 }

@@ -732,3 +732,57 @@ ul {
     color: $ds25;
   }
 }
+
+
+/* star rating 
+====================*/
+
+.star-rating {
+  margin-top: 40px;
+
+  &__header {
+    @extend %h3;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+  }
+
+  &__wrapper {
+    display: inline-flex;
+    justify-content: space-between;
+    max-width: 260px;
+  }
+
+  &__element {
+    direction: rtl;
+    margin-left: 20px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    & label {
+      display: inline-block;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url(../../static/img/star_border.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      cursor: pointer;
+    }
+
+    & input {
+      display: none;
+    }
+
+    & label:hover,
+    & label:hover~label,
+    & input:checked~label {
+      background-image: url(../../static/img/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

@@ -26,7 +26,7 @@
   color: #1f2041;
 }
 
-.h3, .input-element__head, .input-element__text, .expandable-checkbox__header, .radio-buttons__head, .toggle__head, .like-button__head {
+.h3, .input-element__head, .input-element__text, .expandable-checkbox__header, .radio-buttons__head, .toggle__head, .like-button__head, .star-rating__header {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 12px;
@@ -661,4 +661,52 @@ ul {
   font-size: 10px;
   line-height: 12px;
   color: rgba(31, 32, 65, 0.25);
+}
+
+/* star rating 
+====================*/
+.star-rating {
+  margin-top: 40px;
+}
+
+.star-rating__header {
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.star-rating__wrapper {
+  display: inline-flex;
+  justify-content: space-between;
+  max-width: 260px;
+}
+
+.star-rating__element {
+  direction: rtl;
+  margin-left: 20px;
+}
+
+.star-rating__element:first-of-type {
+  margin-left: 0;
+}
+
+.star-rating__element label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../static/img/star_border.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.star-rating__element input {
+  display: none;
+}
+
+.star-rating__element label:hover,
+.star-rating__element label:hover ~ label,
+.star-rating__element input:checked ~ label {
+  background-image: url(../../static/img/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }

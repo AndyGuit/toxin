@@ -1,0 +1,43 @@
+@media (max-width: 1300px) {
+  .logo {
+    display: none;
+  }
+
+  .colors {
+    margin: 45px 50px;
+
+    &__block {
+      flex-shrink: 0;
+    }
+  }
+
+  .types {
+    margin: 45px 50px;
+  }
+}
+
+@media (max-width: 655px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .colors {
+    margin: 0;
+    padding: 15px 10px;
+  }
+
+  .types {
+    padding: 15px 10px;
+    margin: 0;
+
+    &__element {
+      margin-bottom: 20px;
+    }
+
+    &__name {
+      display: flex;
+
+      margin-right: 5px;
+    }
+  }
+}

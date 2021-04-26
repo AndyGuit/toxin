@@ -1,0 +1,59 @@
+.colors {
+  width: 100%;
+  max-width: 282px;
+  margin: 145px 150px;
+
+  &__element {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  &__block {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 6px;
+  }
+
+  &__text {
+    margin-left: 40px;
+  }
+
+  &__name {
+    @extend %h2;
+  }
+
+  &__code {
+    @extend %h2;
+    font-weight: 400;
+  }
+}
+
+.ds100 {
+  background-color: $ds100;
+}
+
+.ds75 {
+  background-color: $ds75;
+}
+
+.ds50 {
+  background-color: $ds50;
+}
+
+.ds25 {
+  background-color: $ds25;
+}
+
+.ds5 {
+  background-color: $ds5;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.green {
+  background-color: $green;
+}

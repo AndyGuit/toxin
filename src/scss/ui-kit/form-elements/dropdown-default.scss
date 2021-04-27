@@ -1,0 +1,33 @@
+.dropdown-default {
+  width: 260px;
+
+  margin-top: 20px;
+
+  &__header {}
+
+  &__head {}
+
+  &__text {}
+
+  &__border {
+    display: flex;
+    justify-content: space-between;
+
+    height: 44px;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid $ds25;
+    border-radius: 4px 4px 0 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid $ds50;
+    }
+  }
+}

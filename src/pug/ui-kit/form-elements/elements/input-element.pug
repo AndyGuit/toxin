@@ -1,0 +1,7 @@
+mixin input-element(head, text, type, placeholder, id)
+  .input-element
+    .input-element__header
+      label.input-element__head(for="textfield-default") #{head}
+      label.input-element__text(for="textfield-default") #{text}
+    .input-element__border
+      input.input-element__textfield(type=type, placeholder=placeholder, id=id)

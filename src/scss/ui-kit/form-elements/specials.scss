@@ -1,0 +1,42 @@
+.specials {
+  margin-top: 41px;
+
+  width: 100%;
+  max-width: 280px;
+
+
+  &__element {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
+    padding-bottom: 17px;
+
+    &:last-child {
+      padding-top: 23px;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    vertical-align: bottom;
+
+    margin-left: 6px;
+  }
+
+  &__description {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &__header {
+    @extend %body;
+    font-weight: 700;
+
+    margin: 0;
+  }
+
+  &__text {
+    @extend %body;
+
+    margin: 0;
+  }
+}

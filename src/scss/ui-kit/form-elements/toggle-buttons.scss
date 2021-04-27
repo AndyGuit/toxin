@@ -1,0 +1,79 @@
+.toggle {
+  margin-top: 40px;
+
+  width: 100%;
+  max-width: 260px;
+
+  height: 89px;
+
+  &__head {
+    text-transform: uppercase;
+    @extend %h3;
+    margin: 0;
+  }
+
+  &__element {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 20px;
+
+    border: 1px solid $ds25;
+    border-radius: 10px;
+
+    flex-shrink: 0;
+
+    transition: all 0.3s ease-out;
+  }
+
+  &__checkbox {
+    position: absolute;
+
+    width: 40px;
+    height: 20px;
+
+    margin-left: 0;
+    margin-top: 0;
+
+    opacity: 0;
+
+    z-index: 1;
+
+    cursor: pointer;
+
+    &:checked+.toggle__btn {
+      border-color: $purple;
+    }
+
+    &:checked~.toggle__dot {
+      background-color: #bc9cff;
+      margin: 4px 4px 4px 24px;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: $ds25;
+    border-radius: 50%;
+
+    margin: 4px 24px 4px 4px;
+
+    transition: all 0.3s ease-out;
+  }
+
+  &__label {
+    margin-left: 10px;
+    @extend %body;
+
+    cursor: pointer;
+  }
+}

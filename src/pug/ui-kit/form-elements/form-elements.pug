@@ -1,0 +1,34 @@
+extends ../../layout
+include elements/input-element
+include elements/expandable-checkbox
+
+block vars
+  - pageTitle = 'Form Elements';
+
+block content
+  .container
+    include ../../logo
+    .content
+
+      .input-section
+        +input-element('text field', 'default', 'email', 'Email', 'textfield1')
+        +input-element('text field', 'hover / focus', 'text', 'This is pretty awesome', 'textfield2')
+        include elements/dropdown
+        +input-element('masked text field', '', 'text', 'ДД.ММ.ГГГГ', 'textfield3')
+        include elements/date-dropdown
+        include elements/filter-rate-dropdown
+        include elements/subscription-text-field
+        include elements/dropdown-default
+        .dropdown-expand.shadow
+          include elements/dropdown-default
+          include elements/dropdown-list
+        +expandable-checkbox()
+        +expandable-checkbox("checked")
+        include elements/specials
+
+      .middle-section
+        include elements/checkbox-buttons
+        include elements/radio-buttons
+        include elements/toggle-buttons
+        include elements/like-button
+        include elements/star-rating

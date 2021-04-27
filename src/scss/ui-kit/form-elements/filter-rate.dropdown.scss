@@ -1,0 +1,28 @@
+.filter-rate-dropdown {
+  width: 266px;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input-element {
+  &__border-small {
+    width: 266px;
+    height: 44px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid $ds25;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid $ds50;
+    }
+  }
+}
+

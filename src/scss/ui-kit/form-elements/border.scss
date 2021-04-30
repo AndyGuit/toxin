@@ -1,0 +1,30 @@
+.border {
+  height: 44px;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid $ds25;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $ds50;
+  }
+}
+
+.border-dropdown {
+  border: 1px solid $ds25;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $ds50;
+  }
+}
+

@@ -1,6 +1,9 @@
 extends ../../layout
-include elements/input-element
 include elements/expandable-checkbox
+
+include elements/element-header
+include elements/element-input
+include elements/dropdown-menu
 
 block vars
   - pageTitle = 'Form Elements';
@@ -11,13 +14,31 @@ block content
     .content
 
       .input-section
-        +input-element('text field', 'default', 'email', 'Email', 'textfield1')
-        +input-element('text field', 'hover / focus', 'text', 'This is pretty awesome', 'textfield2')
-        include elements/dropdown
-        +input-element('masked text field', '', 'text', 'ДД.ММ.ГГГГ', 'textfield3')
+        +element-header('text field', 'default', 'text-field-default')
+        .border
+          +element-input('text', 'Email', 'email')
+
+        +element-header('text field', 'hover / focus', 'text-field-hover')
+        .border
+          +element-input('text', '', 'text', '', 'This is pretty awesome')
+
+        +element-header('dropdown', '', '')
+        .border-dropdown
+          +dropdown-menu('Сколько гостей', 'drop')
+
+        +element-header('masked text field', '', 'text-field-masked')
+        .border
+          +element-input('text', 'ДД.ММ.ГГГГ', 'text')
+
         include elements/date-dropdown
         include elements/filter-rate-dropdown
-        include elements/subscription-text-field
+
+        .w267
+          +element-header('subscription text field', '', 'text-field-default')
+          .border
+            +element-input('text', 'Email', 'email', '../../../static/img/arrow_forward_purple.svg')
+
+
         include elements/dropdown-default
         .dropdown-expand.shadow
           include elements/dropdown-default

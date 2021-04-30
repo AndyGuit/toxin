@@ -1,0 +1,20 @@
+.element-header {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+
+  margin-bottom: 8px;
+  margin-top: 20px;
+
+  &__head {
+    @extend %h3;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @extend %h3;
+    color: $ds50;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}

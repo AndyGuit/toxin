@@ -1,0 +1,5 @@
+mixin dropdown-menu(guests, id)
+  label.dropdown-menu__head(for=id) #{guests}
+    label.dropdown-menu__arrow(for=id)
+      input.dropdown-menu__checkbox(type='checkbox', id=id)
+      span.dropdown-menu__button

@@ -49,7 +49,15 @@ body {
   width: 260px;
 }
 
-@import "ui-kit/form-elements/input-element.scss";
+.w267 {
+  width: 267px;
+}
+
+@import "ui-kit/form-elements/element-header.scss";
+
+@import "ui-kit/form-elements/border.scss";
+
+@import "ui-kit/form-elements/element-input.scss";
 
 @import "ui-kit/form-elements/dropdown.scss";
 
@@ -57,7 +65,7 @@ body {
 
 @import "ui-kit/form-elements/filter-rate.dropdown.scss";
 
-@import "ui-kit/form-elements/subscription-text-field.scss";
+
 
 @import "ui-kit/form-elements/dropdown-default.scss";
 

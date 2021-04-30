@@ -1,0 +1,39 @@
+.element-input {
+  &__textfield {
+    @extend %body;
+    color: $ds75;
+
+    margin: 13px 5px 13px 15px;
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      @extend %body;
+      color: $ds25;
+    }
+  }
+  &__btn {
+    margin: 18px 15.5px;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+
+    &:active .element-input__img {
+      opacity: 0.5;
+    }
+  }
+  &__img {
+    transition: all 0.2s;
+  }
+}
+
+
+
+
+
+
+

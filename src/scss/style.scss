@@ -43,6 +43,8 @@ body {
   margin-left: 141px;
   margin-top: 85px;
   margin-bottom: 132px;
+
+  width: 320px;
 }
 
 .dropdown-expand {
@@ -59,17 +61,21 @@ body {
 
 @import "ui-kit/form-elements/element-input.scss";
 
-@import "ui-kit/form-elements/dropdown.scss";
+@import "ui-kit/form-elements/dropdown-menu.scss";
+
+.dropdown-date-wrapper {
+  display: inline-flex;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.dropdown-date {
+  width: 150px;
+}
 
 @import "ui-kit/form-elements/date-dropdown.scss";
 
-@import "ui-kit/form-elements/filter-rate.dropdown.scss";
-
-
-
-@import "ui-kit/form-elements/dropdown-default.scss";
-
-@import "ui-kit/form-elements/dropdown-list.scss";
+@import "ui-kit/form-elements/dropdown-menu-list.scss";
 
 @import "ui-kit/form-elements/shadow.scss";
 

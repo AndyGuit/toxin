@@ -1,0 +1,45 @@
+.dropdown-menu-list {
+  position: relative;
+
+  display: block;
+
+  border-top: 1px solid $ds50;
+}
+
+.dropdown-menu {
+  &__ul {
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @extend %h3;
+    text-transform: uppercase;
+
+    margin: 7px 7px 7px 15px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 92px;
+  }
+  &__btn-minus,
+  &__btn-plus {
+    width: 30px;
+    height: 30px;
+
+    background: transparent;
+    border: 1px solid $ds50;
+    border-radius: 50%;
+    color: $ds50;
+  }
+  &__btn-minus {
+    color: $ds25;
+    border-color: $ds25;
+  }
+}

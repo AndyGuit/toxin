@@ -4,6 +4,7 @@ include elements/expandable-checkbox
 include elements/element-header
 include elements/element-input
 include elements/dropdown-menu
+include elements/dropdown-menu-list
 
 block vars
   - pageTitle = 'Form Elements';
@@ -30,19 +31,43 @@ block content
         .border
           +element-input('text', 'ДД.ММ.ГГГГ', 'text')
 
-        include elements/date-dropdown
-        include elements/filter-rate-dropdown
+        .dropdown-date-wrapper
+          .dropdown-date
+            +element-header('date Dropdown', '', '')
+            .border-dropdown
+              +dropdown-menu('ДД.ММ.ГГГГ', 'date-dropdown')
+          .dropdown-date
+            +element-header('date Dropdown', '', '')
+            .border-dropdown
+              +dropdown-menu('19.08.2019', 'date-dropdown-2')
 
         .w267
+
+          +element-header('filter-rate-dropdown', '', 'filter-dropdown')
+          .border-dropdown
+            +dropdown-menu('19 авг - 23 авг', 'filter-dropdown')
+
           +element-header('subscription text field', '', 'text-field-default')
           .border
             +element-input('text', 'Email', 'email', '../../../static/img/arrow_forward_purple.svg')
 
+          +element-header('dropdown', '', 'default')
+          .border-dropdown
+            +dropdown-menu('2 спальни, 2 кровати...', 'dropdown-default')
 
-        include elements/dropdown-default
-        .dropdown-expand.shadow
-          include elements/dropdown-default
-          include elements/dropdown-list
+          +element-header('dropdown', 'default', '')
+          .border-dropdown.shadow
+            +dropdown-menu('2 спальни, 2 кровати...', 'dropdown-default-expand')
+            .dropdown-menu-list
+              ul.dropdown-menu__ul
+                +listItem('спальни', '2')
+                +listItem('кровати', '2')
+                +listItem('ванные комнаты', '0')
+
+
+        //- .dropdown-expand.shadow
+        //-   include elements/dropdown-default
+        //-   include elements/dropdown-list
         +expandable-checkbox()
         +expandable-checkbox("checked")
         include elements/specials

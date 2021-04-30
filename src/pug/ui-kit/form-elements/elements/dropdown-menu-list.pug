@@ -1,0 +1,7 @@
+mixin listItem(guestType, guestNumber)
+  li.dropdown-menu__item
+    span #{guestType}
+    div.dropdown-menu__buttons
+      button.dropdown-menu__btn-minus -
+      span #{guestNumber}
+      button.dropdown-menu__btn-plus +

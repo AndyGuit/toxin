@@ -1,11 +1,11 @@
 extends ../../layout
-include elements/expandable-checkbox
 
 include elements/element-header
 include elements/element-input
 include elements/dropdown-menu
 include elements/dropdown-menu-list
 include elements/checkbox
+include elements/checkbox-expand
 
 block vars
   - pageTitle = 'Form Elements';
@@ -65,8 +65,9 @@ block content
                 +listItem('кровати', '2')
                 +listItem('ванные комнаты', '0')
 
-        +expandable-checkbox()
-        +expandable-checkbox("checked")
+          +checkbox-expand('expandable checkbox list', 'expand-checkbox')
+          +checkbox-expand('expandable checkbox list', 'expand-checkbox', 'checked')
+
         include elements/specials
 
       .middle-section

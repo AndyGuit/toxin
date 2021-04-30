@@ -83,6 +83,7 @@ body {
 
 
 .middle-section {
+  margin-top: 85px;
   margin-right: 72px;
   margin-left: 126px;
 
@@ -90,7 +91,7 @@ body {
 
 }
 
-@import "ui-kit/form-elements/checkbox-buttons.scss";
+@import "ui-kit/form-elements/checkbox.scss";
 
 @import "ui-kit/form-elements/radio-buttons.scss";
 

@@ -5,6 +5,7 @@ include elements/element-header
 include elements/element-input
 include elements/dropdown-menu
 include elements/dropdown-menu-list
+include elements/checkbox
 
 block vars
   - pageTitle = 'Form Elements';
@@ -69,7 +70,12 @@ block content
         include elements/specials
 
       .middle-section
-        include elements/checkbox-buttons
+        +element-header('checkbox buttons', '', '')
+        ul(style='padding: 0; margin: 8px, 0, 0')
+          +checkbox('Можно курить', 'smoking')
+          +checkbox('Можно с питомцами', 'pets', 'checked')
+          +checkbox('Можно пригласить гостей (до 10 человек)', 'guest', 'checked')
+
         include elements/radio-buttons
         include elements/toggle-buttons
         include elements/like-button

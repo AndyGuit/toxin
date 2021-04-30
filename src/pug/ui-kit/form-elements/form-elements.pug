@@ -74,3 +74,13 @@ block content
         include elements/toggle-buttons
         include elements/like-button
         include elements/star-rating
+
+        +element-header('dropdown', '', '')
+        .border-dropdown.shadow
+          +dropdown-menu('Сколько гостей', 'dropdown')
+          .dropdown-menu-list
+            ul.dropdown-menu__ul
+              +listItem('взрослые', '0')
+              +listItem('дети', '0')
+              +listItem('младенцы', '0')
+              include elements/dropdown-menu-list-bottom-btn

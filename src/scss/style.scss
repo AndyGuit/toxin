@@ -86,6 +86,8 @@ body {
   margin-right: 72px;
   margin-left: 126px;
 
+  width: 320px;
+
 }
 
 @import "ui-kit/form-elements/checkbox-buttons.scss";
@@ -97,3 +99,5 @@ body {
 @import "ui-kit/form-elements/like-button.scss";
 
 @import "ui-kit/form-elements/star-rating.scss";
+
+@import "ui-kit/form-elements/dropdown-menu-list-bottom-btn.scss";

@@ -1,0 +1,28 @@
+.dropdown-menu-list-bottom-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 19px 7px 13px 14px;
+
+  &__clear,
+  &__accept {
+    @extend %h3;
+    color: $purple;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-color: transparent;
+
+    padding: 0;
+
+    transition: all 0.1s;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

@@ -10,6 +10,7 @@ include elements/specials
 include elements/radio-button
 include elements/toggle
 include elements/like-button
+include elements/rate-button
 
 block vars
   - pageTitle = 'Form Elements';
@@ -119,7 +120,10 @@ block content
           +like-btn('2', 'like1', checked)
           +like-btn('12', 'like2', 'checked')
 
-        include elements/star-rating
+        +element-header('rate button', textText, forId)
+        .star-rating__wrapper
+          +rate-button('rate-btn1', checked5, 'checked', 'star01', 'star02', 'star03', 'star04', 'star05')
+          +rate-button('rate-btn2', 'checked', checked5, 'star11', 'star12', 'star13', 'star14', 'star15')
 
         +element-header('dropdown', '', '')
         .border-dropdown.shadow

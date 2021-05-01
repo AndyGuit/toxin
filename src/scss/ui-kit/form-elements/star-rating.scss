@@ -1,12 +1,6 @@
 .star-rating {
   margin-top: 40px;
 
-  &__header {
-    @extend %h3;
-    text-transform: uppercase;
-    margin: 0 0 16px 0;
-  }
-
   &__wrapper {
     display: inline-flex;
     justify-content: space-between;
@@ -16,6 +10,8 @@
   &__element {
     direction: rtl;
     margin-left: 20px;
+
+    flex: 0 0 auto;
 
     &:first-of-type {
       margin-left: 0;

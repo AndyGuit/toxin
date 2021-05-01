@@ -8,6 +8,7 @@ include elements/checkbox
 include elements/checkbox-expand
 include elements/specials
 include elements/radio-button
+include elements/toggle
 
 block vars
   - pageTitle = 'Form Elements';
@@ -107,7 +108,11 @@ block content
           +radio('checked', 'male', 'Мужчина')
           +radio(checked, 'female', 'Женщина')
 
-        include elements/toggle-buttons
+        +element-header('toggle', textText, forId)
+        .toggle
+          +toggle('Получать спецпредложения', 'toggle', 'checked')
+          +toggle('Получать спецпредложения', 'toggle1', checked)
+
         include elements/like-button
         include elements/star-rating
 

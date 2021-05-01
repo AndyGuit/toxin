@@ -9,6 +9,7 @@ include elements/checkbox-expand
 include elements/specials
 include elements/radio-button
 include elements/toggle
+include elements/like-button
 
 block vars
   - pageTitle = 'Form Elements';
@@ -113,7 +114,11 @@ block content
           +toggle('Получать спецпредложения', 'toggle', 'checked')
           +toggle('Получать спецпредложения', 'toggle1', checked)
 
-        include elements/like-button
+        +element-header('like button', textText, forId)
+        .like-button
+          +like-btn('2', 'like1', checked)
+          +like-btn('12', 'like2', 'checked')
+
         include elements/star-rating
 
         +element-header('dropdown', '', '')

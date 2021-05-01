@@ -1,6 +1,4 @@
 .like-button {
-  margin-top: 40px;
-
   &__head {
     text-transform: uppercase;
     @extend %h3;
@@ -12,7 +10,6 @@
     display: inline-flex;
     align-items: center;
 
-    margin-top: 16px;
     margin-right: 10px;
   }
 

@@ -1,16 +1,4 @@
-include checkbox
-
 mixin checkbox-expand(text, id, check)
-  .checkbox-expand
-    label.checkbox-expand__header(for=id) #{text}
-    input.checkbox-expand__checkbox(type='checkbox', id=id, checked=check)
-    img.checkbox-expand__button(src="../../../static/img/dropdown_arrow.svg" alt="arrow")
-    ul.checkbox-expand__list
-      +checkbox('Завтрак', 'breakfast', checked)
-      +checkbox('Письменный стол', 'table', 'checked')
-      +checkbox('Стул для кормления', 'chair', 'checked')
-      +checkbox('Кроватка', 'childbed', 'checked')
-      +checkbox('Телевизор', 'tx1', checked)
-      +checkbox('Шампунь', 'shampoo1', checked)
-      +checkbox('Телевизор', 'tv2', checked)
-      +checkbox('Шампунь', 'shampoo2', checked)
+  label.checkbox-expand__header(for=id) #{text}
+  input.checkbox-expand__checkbox(type='checkbox', id=id, checked=check)
+  img.checkbox-expand__button(src="../../../static/img/dropdown_arrow.svg" alt="arrow")

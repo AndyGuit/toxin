@@ -65,8 +65,29 @@ block content
                 +listItem('кровати', '2')
                 +listItem('ванные комнаты', '0')
 
-          +checkbox-expand('expandable checkbox list', 'expand-checkbox')
-          +checkbox-expand('expandable checkbox list', 'expand-checkbox', 'checked')
+          .checkbox-expand
+            +checkbox-expand('expandable checkbox list', 'expand-checkbox')
+            ul.checkbox-expand__list
+              +checkbox('Завтрак', 'breakfast', checked)
+              +checkbox('Письменный стол', 'table', 'checked')
+              +checkbox('Стул для кормления', 'chair', 'checked')
+              +checkbox('Кроватка', 'childbed', 'checked')
+              +checkbox('Телевизор', 'tx1', checked)
+              +checkbox('Шампунь', 'shampoo1', checked)
+              +checkbox('Телевизор', 'tv2', checked)
+              +checkbox('Шампунь', 'shampoo2', checked)
+
+          .checkbox-expand
+            +checkbox-expand('expandable checkbox list', 'expand-checkbox1')
+            ul.checkbox-expand__list
+              +checkbox('Завтрак', 'breakfast1', checked)
+              +checkbox('Письменный стол', 'table1', 'checked')
+              +checkbox('Стул для кормления', 'chair1', 'checked')
+              +checkbox('Кроватка', 'childbed1', 'checked')
+              +checkbox('Телевизор', 'tx11', checked)
+              +checkbox('Шампунь', 'shampoo11', checked)
+              +checkbox('Телевизор', 'tv21', checked)
+              +checkbox('Шампунь', 'shampoo21', checked)
 
         include elements/specials
 

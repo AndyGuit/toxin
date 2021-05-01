@@ -11,6 +11,7 @@ include elements/radio-button
 include elements/toggle
 include elements/like-button
 include elements/rate-button
+include elements/rich-checkbox
 
 block vars
   - pageTitle = 'Form Elements';
@@ -125,7 +126,7 @@ block content
           +rate-button('rate-btn1', checked5, 'checked', 'star01', 'star02', 'star03', 'star04', 'star05')
           +rate-button('rate-btn2', 'checked', checked5, 'star11', 'star12', 'star13', 'star14', 'star15')
 
-        +element-header('dropdown', '', '')
+        +element-header('dropdown', textText, forId)
         .border-dropdown.shadow
           +dropdown-menu('Сколько гостей', 'dropdown')
           .dropdown-menu-list
@@ -134,3 +135,8 @@ block content
               +listItem('дети', '0')
               +listItem('младенцы', '0')
               include elements/dropdown-menu-list-bottom-btn
+
+        +element-header('rich checkbox buttons', textText, forId)
+        ul.rich-checkbox
+          +rich-checkbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor', checked)
+          +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledPeople', checked)

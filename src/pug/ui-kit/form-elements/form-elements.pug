@@ -6,6 +6,7 @@ include elements/dropdown-menu
 include elements/dropdown-menu-list
 include elements/checkbox
 include elements/checkbox-expand
+include elements/specials
 
 block vars
   - pageTitle = 'Form Elements';
@@ -89,7 +90,9 @@ block content
               +checkbox('Телевизор', 'tv21', checked)
               +checkbox('Шампунь', 'shampoo21', checked)
 
-        include elements/specials
+        .specials
+          +specials('../../../../static/img/emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
+          +specials('../../../../static/img/city.svg', 'Удобство', 'Окно в каждой из спален')
 
       .middle-section
         +element-header('checkbox buttons', '', '')

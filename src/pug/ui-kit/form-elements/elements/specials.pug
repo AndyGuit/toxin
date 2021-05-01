@@ -1,13 +1,7 @@
-.specials
+mixin specials(img, header, text)
   .specials__element
     .specials__img
-      img(src="../../../static/img/emoticon.svg" alt="")
+      img(src=img alt="")
     .specials__description
-      h1.specials__header Комфорт
-      p.specials__text Шумопоглощающие стены
-  .specials__element
-    .specials__img
-      img(src="../../../static/img/city.svg" alt="")
-    .specials__description
-      h1.specials__header Удобство
-      p.specials__text Окно в каждой из спален
+      h1.specials__header #{header}
+      p.specials__text #{text}

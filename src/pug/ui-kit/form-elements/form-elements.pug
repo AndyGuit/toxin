@@ -7,6 +7,7 @@ include elements/dropdown-menu-list
 include elements/checkbox
 include elements/checkbox-expand
 include elements/specials
+include elements/radio-button
 
 block vars
   - pageTitle = 'Form Elements';
@@ -79,7 +80,7 @@ block content
               +checkbox('Шампунь', 'shampoo2', checked)
 
           .checkbox-expand
-            +checkbox-expand('expandable checkbox list', 'expand-checkbox1')
+            +checkbox-expand('expandable checkbox list', 'expand-checkbox1', 'checked')
             ul.checkbox-expand__list
               +checkbox('Завтрак', 'breakfast1', checked)
               +checkbox('Письменный стол', 'table1', 'checked')
@@ -91,17 +92,21 @@ block content
               +checkbox('Шампунь', 'shampoo21', checked)
 
         .specials
-          +specials('../../../../static/img/emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
-          +specials('../../../../static/img/city.svg', 'Удобство', 'Окно в каждой из спален')
+          +specials('../../../static/img/emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
+          +specials('../../../static/img/city.svg', 'Удобство', 'Окно в каждой из спален')
 
       .middle-section
-        +element-header('checkbox buttons', '', '')
+        +element-header('checkbox buttons', textText, forId)
         ul(style='padding: 0; margin: 8px, 0, 0')
           +checkbox('Можно курить', 'smoking')
           +checkbox('Можно с питомцами', 'pets', 'checked')
           +checkbox('Можно пригласить гостей (до 10 человек)', 'guest', 'checked')
 
-        include elements/radio-buttons
+        +element-header('radio buttons', textText, forId)
+        .radio-buttons
+          +radio('checked', 'male', 'Мужчина')
+          +radio(checked, 'female', 'Женщина')
+
         include elements/toggle-buttons
         include elements/like-button
         include elements/star-rating

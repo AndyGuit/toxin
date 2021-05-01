@@ -1,0 +1,5 @@
+mixin radio(checked, id, text)
+  .radio-buttons__element
+    input(type="radio" id=id name="gender" checked=checked)
+    span.radio-buttons__btn
+    label.radio-buttons__label(for=id) #{text}

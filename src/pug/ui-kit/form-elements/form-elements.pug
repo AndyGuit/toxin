@@ -12,6 +12,7 @@ include elements/toggle
 include elements/like-button
 include elements/rate-button
 include elements/rich-checkbox
+include elements/button-click-me
 
 block vars
   - pageTitle = 'Form Elements';
@@ -144,6 +145,18 @@ block content
         include elements/review-element
 
       .right-section
+
         .range-slider
           +element-header('Range Slider', '5 000₽ - 10 000₽', forId)
           input(type="range")
+
+        .buttons
+          +element-header('buttons', textText, forId)
+          .button-wrapper
+            +btn-click-me('Click Me', 'btn-click-me__btn')
+            +btn-click-me('Click Me', 'btn-click-me__btn_active')
+          .button-wrapper
+            +btn-click-me('Click Me', 'btn-click-me__btn-border')
+            +btn-click-me('Click Me', 'btn-click-me__btn-border')
+          +btn-click-me('Click Me', 'btn-click-me__btn-simple')
+          +btn-click-me('Click Me', 'btn-click-me__btn-simple')

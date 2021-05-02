@@ -1,0 +1,96 @@
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.buttons {
+  max-width: 218px;
+}
+
+.btn-click-me {
+  &__btn {
+    @extend %h3;
+    color: #fff;
+    width: 99px;
+    height: 44px;
+    border-radius: 22px;
+    background: $purple-gradient;
+    border: none;
+    text-transform: uppercase;
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &_active {
+      @extend %h3;
+      color: #fff;
+      width: 99px;
+      height: 44px;
+      border-radius: 22px;
+      background: $purple-gradient;
+      border: none;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+  }
+
+  &__btn-border {
+    @extend %h3;
+    color: $purple;
+    width: 95px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 22px;
+    background-color: #fff;
+    text-transform: uppercase;
+
+    position: relative;
+
+    top: 2px;
+    left: 2px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      left: -4px;
+      right: -4px;
+      background: $purple-gradient;
+      z-index: -1;
+      border-radius: 22px;
+    }
+
+    &:active::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      left: -4px;
+      right: -4px;
+      background: $purple-gradient;
+      z-index: -1;
+      border-radius: 22px;
+
+      opacity: 0.5;
+    }
+  }
+
+  &__btn-simple {
+    @extend %h3;
+    text-transform: uppercase;
+    color: $purple;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    margin-right: 20px;
+
+    &:active {
+      color: $ds50;
+    }
+  }
+}

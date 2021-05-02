@@ -142,3 +142,8 @@ block content
           +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledPeople', checked)
 
         include elements/review-element
+
+      .right-section
+        .range-slider
+          +element-header('Range Slider', '5 000₽ - 10 000₽', forId)
+          input(type="range")

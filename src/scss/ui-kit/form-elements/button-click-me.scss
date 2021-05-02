@@ -93,4 +93,29 @@
       color: $ds50;
     }
   }
+
+  &__btn-sale {
+    @extend %h3;
+    color: #fff;
+    width: 320px;
+    height: 44px;
+    border-radius: 22px;
+    background: $purple-gradient;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+
+    &:after {
+      content: url('../../static/img/arrow_forward_white.svg');
+
+      position: absolute;
+
+      top: 13px;
+      left: 287px;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
 }

@@ -130,10 +130,4 @@ body {
 /* Cards
 ============================ */
 
-.cards1 {
-  max-width: 380px;
-
-  margin: 72px 0 0 140px;
-}
-
-@import "ui-kit/cards/find-number-card.scss";
+@import "ui-kit/cards/card-styles.scss";

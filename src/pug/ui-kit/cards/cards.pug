@@ -3,6 +3,9 @@ extends ../../layout
 include ../form-elements/elements/element-header
 include ../form-elements/elements/dropdown-menu
 include ../form-elements/elements/button-click-me
+include ../form-elements/elements/element-input
+include ../form-elements/elements/radio-button
+include ../form-elements/elements/toggle
 
 block vars
   - pageTitle = 'Cards';
@@ -15,7 +18,7 @@ block content
 
       .cards1
 
-        .find-number-card.shadow
+        .card-wrapper.shadow
           h1.card-header Найдём номера под ваши пожелания
 
           .dropdown-date-wrapper
@@ -32,4 +35,39 @@ block content
           .border-dropdown
             +dropdown-menu('Сколько гостей', 'drop')
 
+          +btn-click-me('подобрать номер', 'btn-click-me__btn-sale')
+
+
+
+        .card-wrapper.shadow
+          h1.card-header Регистрация аккаунта
+
+          .border
+            +element-input('text', 'имя', id, img, value)
+          .border
+            +element-input('text', 'фамилия', id, img, value)
+
+          .radio-buttons
+            +radio('checked', 'male', 'Мужчина')
+            +radio(checked, 'female', 'Женщина')
+
+          +element-header('дата рождения', textText, forId)
+          .border
+            +element-input('text', 'ДД.ММ.ГГГГ', id, img, value)
+
+          +element-header('данные для входа в сервис', textText, forId)
+          .border
+            +element-input('text', 'Email', id, img, value)
+          .border
+            +element-input('password', 'Пароль', id, img, value)
+          .toggle
+            +toggle('Получать спецпредложения', 'toggle1', checked)
+
           +btn-click-me('перейти к оплате', 'btn-click-me__btn-sale')
+
+          .sign-in-wrapper
+            a.sign-up-already Уже есть аккаунт на Toxin
+            +btn-click-me('войти', 'btn-click-me__btn-border')
+
+      .cards2
+        .card-wrapper.shadow

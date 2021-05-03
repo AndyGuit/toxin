@@ -26,11 +26,11 @@ block content
       .input-section
         +element-header('text field', 'default', 'text-field-default')
         .border
-          +element-input('text', 'Email', 'email')
+          +element-input('text', 'Email', 'email', img, value)
 
         +element-header('text field', 'hover / focus', 'text-field-hover')
         .border
-          +element-input('text', '', 'text', '', 'This is pretty awesome')
+          +element-input('text', placeholder, 'text', img, 'This is pretty awesome')
 
         +element-header('dropdown', '', '')
         .border-dropdown
@@ -38,7 +38,7 @@ block content
 
         +element-header('masked text field', '', 'text-field-masked')
         .border
-          +element-input('text', 'ДД.ММ.ГГГГ', 'text')
+          +element-input('text', 'ДД.ММ.ГГГГ', 'text', img, value)
 
         .dropdown-date-wrapper
           .dropdown-date

@@ -166,3 +166,13 @@ block content
           +element-header('pagination', textText, forId)
           include elements/pagination
           p.pagination__text 1 – 12 из 100+ вариантов аренды
+
+        +element-header('dropdown', textText, forId)
+        .border-dropdown.shadow
+          +dropdown-menu('3 гостя', 'dropdown')
+          .dropdown-menu-list
+            ul.dropdown-menu__ul
+              +listItem('взрослые', '2')
+              +listItem('дети', '1')
+              +listItem('младенцы', '0')
+              include elements/dropdown-menu-list-bottom-btn

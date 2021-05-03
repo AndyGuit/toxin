@@ -4,6 +4,10 @@
   margin: 72px 0 0 140px;
 }
 
+.cards2 {
+  margin: 72px 40px 0 40px;
+}
+
 .card-wrapper {
   width: 380px;
 
@@ -33,4 +37,89 @@
   @extend %body;
   line-height: 18px;
 
+}
+
+.number-info-header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-end;
+  &__number {
+    margin: 0;
+
+    &:before {
+      content: '№';
+
+      @extend %body;
+      font-weight: 700;
+      line-height: 17px;
+      color: $ds100;
+    }
+
+    &:after {
+      content: 'люкс';
+
+      @extend %h3;
+      color: $purple;
+      text-transform: uppercase;
+    }
+  }
+
+  &__price {
+    margin: 0;
+
+    @extend %body;
+    line-height: 18px;
+    font-weight: 700;
+    color: $ds50;
+  }
+
+  &__per-day {
+    font-weight: 400;
+  }
+}
+
+.number-price-info {
+  &__element {
+    display: flex;
+    justify-content: space-between;
+
+    @extend %body;
+    color: $ds75;
+  }
+
+  &__sum {}
+
+  &__price {}
+
+  &__service-charge {
+    width: 214px;
+
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 3px;
+    right: -27px;
+
+  }
+
+  &__total-word {
+    @extend %h2;
+    margin: 0;
+  }
+
+  &__total-price {
+    @extend %h2;
+    margin: 0;
+  }
+}
+
+.dot-border {
+  height: 24px;
+  width: 173px;
+  border-bottom: 1px dotted $ds25;
+  position: relative;
+  bottom: 6px;
 }

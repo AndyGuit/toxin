@@ -93,4 +93,12 @@ block content
           +btn-click-me('забронировать', 'btn-click-me__btn-sale')
 
         .card-wrapper.shadow
-          
+          h1.card-header Войти
+          .border
+            +element-input('text', 'Email', id, img, value)
+          .border
+            +element-input('password', 'Пароль', id, img, value)
+          +btn-click-me('войти', 'btn-click-me__btn-sale')
+          .sign-in-wrapper
+            a.sign-up-already Нет аккаунта на Toxin?
+            +btn-click-me('создать', 'btn-click-me__btn-border')

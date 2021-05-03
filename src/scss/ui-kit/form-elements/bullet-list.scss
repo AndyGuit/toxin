@@ -1,0 +1,15 @@
+.bullet-list {
+  &__list {
+    max-width: 260px;
+    padding: 0 0 0 18px;
+  }
+
+  &__element {
+    @extend %body;
+    color: $ds75;
+
+    margin: 10px 0;
+
+    list-style-image: url(../../static/img/list-style.svg);
+  }
+}

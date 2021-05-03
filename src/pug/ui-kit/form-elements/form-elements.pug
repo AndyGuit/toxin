@@ -13,6 +13,7 @@ include elements/like-button
 include elements/rate-button
 include elements/rich-checkbox
 include elements/button-click-me
+include elements/bullet-list-element
 
 block vars
   - pageTitle = 'Form Elements';
@@ -169,10 +170,17 @@ block content
 
         +element-header('dropdown', textText, forId)
         .border-dropdown.shadow
-          +dropdown-menu('3 гостя', 'dropdown')
+          +dropdown-menu('3 гостя', 'dropdown3')
           .dropdown-menu-list
             ul.dropdown-menu__ul
               +listItem('взрослые', '2')
               +listItem('дети', '1')
               +listItem('младенцы', '0')
               include elements/dropdown-menu-list-bottom-btn
+
+        +element-header('bullet list', textText, forId)
+        .bullet-list
+          ul.bullet-list__list
+            +bullet-list__element('Нельзя с питомцами')
+            +bullet-list__element('Без вечеринок и мероприятий')
+            +bullet-list__element('Время прибытия — после 13:00, а выезд до 12:00')

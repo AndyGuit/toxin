@@ -7,6 +7,7 @@ include ../form-elements/elements/element-input
 include ../form-elements/elements/radio-button
 include ../form-elements/elements/toggle
 include elements/number-info-header
+include elements/card-date-picker__day
 
 block vars
   - pageTitle = 'Cards';
@@ -102,3 +103,60 @@ block content
           .sign-in-wrapper
             a.sign-up-already Нет аккаунта на Toxin?
             +btn-click-me('создать', 'btn-click-me__btn-border')
+
+      .cards3
+
+        .card-date-picker
+          .card-date-picker__header
+            button.card-date-picker__arrow-back
+            p.card-date-picker__month Август
+            button.card-date-picker__arrow-forward(src="../../../../static/img/arrow_forward_purple.svg")
+          .card-date-picker__week-wrap
+            +card-date-picker__day('Пн', background)
+            +card-date-picker__day('Вт', background)
+            +card-date-picker__day('Ср', background)
+            +card-date-picker__day('Чт', background)
+            +card-date-picker__day('Пт', background)
+            +card-date-picker__day('Сб', background)
+            +card-date-picker__day('Вс', background)
+          .card-date-picker__day-wrap
+            +card-date-picker__day('29', background, 'card-date-picker__day-wrap_ds25')
+            +card-date-picker__day('30', background, 'card-date-picker__day-wrap_ds25')
+            +card-date-picker__day('31', background, 'card-date-picker__day-wrap_ds25')
+            +card-date-picker__day('1', background)
+            +card-date-picker__day('2', background)
+            +card-date-picker__day('3', background)
+            +card-date-picker__day('4', background)
+          .card-date-picker__day-wrap
+            +card-date-picker__day('5', background)
+            +card-date-picker__day('6', background)
+            +card-date-picker__day('7', background)
+            +card-date-picker__day('8', 'datepick-element-background__green')
+            +card-date-picker__day('9', background)
+            +card-date-picker__day('10', background)
+            +card-date-picker__day('11', background)
+          .card-date-picker__day-wrap
+            +card-date-picker__day('12', background)
+            +card-date-picker__day('13', background)
+            +card-date-picker__day('14', background)
+            +card-date-picker__day('15', background)
+            +card-date-picker__day('16', background)
+            +card-date-picker__day('17', background)
+            +card-date-picker__day('18', background)
+          .card-date-picker__day-wrap
+            +card-date-picker__day('19', 'datepick-element-background__purple before-date')
+            +card-date-picker__day('20', 'datepick-element-background__purpleOp')
+            +card-date-picker__day('21', 'datepick-element-background__purpleOp')
+            +card-date-picker__day('22', 'datepick-element-background__purpleOp')
+            +card-date-picker__day('23', 'datepick-element-background__purple after-date')
+            +card-date-picker__day('24', background)
+            +card-date-picker__day('25', background)
+          .card-date-picker__day-wrap
+            +card-date-picker__day('26', background)
+            +card-date-picker__day('27', background)
+            +card-date-picker__day('28', background)
+            +card-date-picker__day('29', background)
+            +card-date-picker__day('30', background)
+            +card-date-picker__day('31', background)
+            +card-date-picker__day('1', background, 'card-date-picker__day-wrap_ds25')
+          include ../form-elements/elements/dropdown-menu-list-bottom-btn

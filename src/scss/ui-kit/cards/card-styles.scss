@@ -8,12 +8,30 @@
   margin: 72px 40px 0 40px;
 }
 
+.cards3 {
+  margin: 72px 140px 0 0;
+}
+
+.card-date-picker {
+  width: 320px;
+
+  background-color: #fff;
+  border: 1px solid $ds25;
+  border-radius: 4px;
+
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .card-wrapper {
   width: 380px;
 
   background-color: #fff;
 
   border-radius: 4px;
+
+  z-index: -2;
+  position: relative;
 
   padding: 40px 30px 30px 30px;
   margin-bottom: 40px;
@@ -87,10 +105,6 @@
     @extend %body;
     color: $ds75;
   }
-
-  &__sum {}
-
-  &__price {}
 
   &__service-charge {
     width: 214px;

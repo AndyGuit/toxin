@@ -1,0 +1,80 @@
+.card-room {
+  width: 270px;
+  height: 257px;
+
+  background-color: #fff;
+  border-radius: 4px;
+  &__picture {
+    height: 151px;
+    background: url(../../../../static/img/room1.png);
+    display: flex;
+    justify-content: space-between;
+
+    &:hover .card-room__prev,
+    &:hover .card-room__next {
+      visibility: visible;
+    }
+  }
+
+  &__prev,
+  &__next {
+    width: 42px;
+    height: 151px;
+
+    visibility: hidden;
+
+    cursor: pointer;
+
+    position: relative;
+
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+
+    &::after {
+      content: url(../../../../static/img/arrow_white.svg);
+      width: 17%;
+      height: 10%;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__picture-select {}
+
+  &__next {
+    transform: rotate(180deg);
+  }
+
+  &__info {
+    padding: 20px 17px 19px 20px;
+  }
+
+  &__hr {
+    border: none;
+    color: $ds10;
+    background-color: $ds10;
+    height: 1px;
+    width: 230px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    @extend %body;
+    color: $ds50;
+    line-height: 18px;
+    margin: 0;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

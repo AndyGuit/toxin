@@ -30,9 +30,6 @@
 
   border-radius: 4px;
 
-  z-index: -2;
-  position: relative;
-
   padding: 40px 30px 30px 30px;
   margin-bottom: 40px;
 }
@@ -86,6 +83,8 @@
   &__price {
     margin: 0;
 
+    padding: 3px 0;
+
     @extend %body;
     line-height: 18px;
     font-weight: 700;
@@ -116,7 +115,6 @@
     position: absolute;
     top: 3px;
     right: -27px;
-
   }
 
   &__total-word {

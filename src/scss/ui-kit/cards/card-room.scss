@@ -4,11 +4,20 @@
 
   background-color: #fff;
   border-radius: 4px;
+
+  margin-bottom: 40px;
   &__picture {
     height: 151px;
-    background: url(../../../../static/img/room1.png);
     display: flex;
     justify-content: space-between;
+
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
 
     &:hover .card-room__prev,
     &:hover .card-room__next {
@@ -30,7 +39,7 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 
     &::after {
-      content: url(../../../../static/img/arrow_white.svg);
+      content: url(../../static/img/arrow_white.svg);
       width: 17%;
       height: 10%;
       overflow: auto;
@@ -43,14 +52,62 @@
     }
   }
 
-  &__picture-select {}
+  &__picture-select {
+
+    position: absolute;
+
+    z-index: 1;
+
+    bottom: 15px;
+    right: 15px;
+
+    &-btn {
+      display: inline-block;
+
+      margin: 0;
+      padding: 0;
+
+      width: 7.5px;
+      height: 7.5px;
+
+      position: relative;
+
+      & input {
+        display: inline-block;
+        margin: 0;
+
+        opacity: 0;
+
+        width: 7.5px;
+        height: 7.5px;
+
+        &:checked ~ span {
+          background-color: #fff;
+        }
+      }
+
+      & span {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 6px;
+        display: inline-block;
+        width: 7.5px;
+        height: 7.5px;
+        border-radius: 50%;
+        border: 1.5px solid #fff;
+        box-shadow: 0 5px 5px 0 #1F20414D;
+      }
+
+    }
+  }
 
   &__next {
     transform: rotate(180deg);
   }
 
   &__info {
-    padding: 20px 17px 19px 20px;
+    padding: 14px 17px 20px;
   }
 
   &__hr {
@@ -58,7 +115,8 @@
     color: $ds10;
     background-color: $ds10;
     height: 1px;
-    width: 230px;
+    width: 234px;
+    margin: 10px 0 8px;
   }
 
   &__rating {

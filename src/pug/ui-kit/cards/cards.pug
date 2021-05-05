@@ -9,6 +9,7 @@ include ../form-elements/elements/toggle
 include elements/number-info-header
 include elements/card-date-picker__day
 include ../form-elements/elements/rate-button
+include elements/card-room
 
 block vars
   - pageTitle = 'Cards';
@@ -162,14 +163,5 @@ block content
             +card-date-picker__day('1', background, 'card-date-picker__day-wrap_ds25')
           include ../form-elements/elements/dropdown-menu-list-bottom-btn
 
-        .card-room.shadow
-          .card-room__picture
-            .card-room__prev
-            .card-room__picture-select
-            .card-room__next
-          .card-room__info
-            +number-info-header('888', '9 990₽')
-            hr.card-room__hr
-            .card-room__rating
-              +rate-button('rate-btn1', checked5, 'checked', 'star01', 'star02', 'star03', 'star04', 'star05')
-              p.card-room__reviews <span>145</span> Отзывов
+        +card-room('888', '9 900₽', '145', '../../../static/img/room1.png')
+        +card-room('840', '9 900₽', '65', '../../../static/img/room2.png')

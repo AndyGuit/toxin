@@ -89,6 +89,10 @@
     line-height: 18px;
     font-weight: 700;
     color: $ds50;
+
+    & span {
+      font-size: 12px;
+    }
   }
 
   &__per-day {

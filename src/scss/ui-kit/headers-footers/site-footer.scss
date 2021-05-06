@@ -1,0 +1,86 @@
+.site-footer {
+  width: 100%;
+
+  margin-top: 40px;
+  &-top {
+    height: 372px;
+    background-color: #fff;
+    padding: 100px 140px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__toxin {
+    max-width: 260px;
+
+    & p {
+      @extend %body;
+      color: $ds75;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    & a:first-of-type {
+      @extend %h3;
+      font-weight: 700;
+      color: $ds100;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    & a {
+      flex-basis: 100%;
+      @extend %body;
+      line-height: 17px;
+      color: $ds50;
+      font-weight: 400;
+      text-decoration: none;
+    }
+  }
+
+  &__subscribe {
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 148px;
+
+    & p:first-of-type {
+      @extend %h3;
+      text-transform: uppercase;
+    }
+
+    & p {
+      @extend %body;
+      margin: 0;
+    }
+  }
+
+  &-bottom {
+    height: 70px;
+    margin-top: 2px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 140px;
+  }
+
+  &__copyright {
+    @extend %body;
+    line-height: 17px;
+    color: $ds75;
+  }
+
+  &__social-links {
+    & a:nth-child(2){
+      margin: 0 20px;
+    }
+  }
+}

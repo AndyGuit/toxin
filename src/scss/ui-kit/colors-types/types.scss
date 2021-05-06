@@ -1,11 +1,15 @@
 .types {
   width: 100%;
   max-width: 436px;
-  margin: 145px 150px;
+  margin: 64px 158px;
 
   &__element {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 50.5px;
+
+    &:last-of-type {
+      max-width: 370px;
+    }
   }
 
   &__name {

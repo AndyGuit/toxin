@@ -1,7 +1,7 @@
 .colors {
   width: 100%;
   max-width: 282px;
-  margin: 145px 150px;
+  margin: 64px 150px;
 
   &__element {
     display: flex;
@@ -22,11 +22,13 @@
 
   &__name {
     @extend %h2;
+    line-height: 28px;
   }
 
   &__code {
     @extend %h2;
     font-weight: 400;
+    line-height: 28px;
   }
 }
 

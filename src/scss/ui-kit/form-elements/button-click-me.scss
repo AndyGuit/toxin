@@ -13,7 +13,8 @@
   &__btn {
     @extend %h3;
     color: #fff;
-    width: 99px;
+    width: fit-content;
+    padding: 0 20px;
     height: 44px;
     border-radius: 22px;
     background: $purple-gradient;

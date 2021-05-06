@@ -141,8 +141,58 @@ body {
 /* Headers & Footers
 ============================ */
 
-.headers-footers {
+.site-header {
   width: 100%;
   height: 70px;
   background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {}
+
+  &__nav-bar {
+  }
+
+  &__link,
+  &__link-dropdown,
+  &__user {
+    @extend %body;
+    text-decoration: none;
+    line-height: 17px;
+    color: $ds50;
+    margin: 0 20px;
+  }
+
+  &__link:first-of-type {
+    font-weight: 700;
+    color: $ds75;
+  }
+
+  &__link-dropdown {
+    &:after {
+      content: url(../../static/img/dropdown_arrow.svg);
+      margin: 0 0 0 5.5px;
+    }
+
+  }
+
+  &__user {
+    margin-left: 0;
+    margin-right: 140px;
+    padding-left: 20px;
+
+    display: inline-block;
+
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-left: 1px solid $ds10;
+      height: 30px;
+      left: 0;
+      bottom: -6px;
+    }
+  }
 }

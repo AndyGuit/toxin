@@ -1,5 +1,7 @@
 .review-wrapper {
   width: 711px;
+
+  margin-top: 219px;
 }
 
 .review-header {
@@ -29,7 +31,7 @@
   &__head {
     @extend %body;
 
-    margin: 0 0 0 15px;
+    margin: 0 0 0 12px;
   }
 
   &__name {
@@ -46,6 +48,8 @@
 .review-footer {
   display: flex;
   align-items: flex-start;
+
+  padding: 1px 0 0 3px;
 
   @extend %body;
 

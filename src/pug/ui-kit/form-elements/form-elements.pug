@@ -40,6 +40,8 @@ block content
         .border
           +element-input('text', 'ДД.ММ.ГГГГ', 'text', img, value)
 
+        .margin20
+
         .dropdown-date-wrapper
           .dropdown-date
             +element-header('date Dropdown', '', '')
@@ -52,19 +54,25 @@ block content
 
         .w267
 
+          .margin20
+
           +element-header('filter-rate-dropdown', '', 'filter-dropdown')
           .border-dropdown
             +dropdown-menu('19 авг - 23 авг', 'filter-dropdown')
+
+          .margin20
 
           +element-header('subscription text field', '', 'text-field-default')
           .border
             +element-input('text', 'Email', 'email', '../../../static/img/arrow_forward_purple.svg')
 
-          +element-header('dropdown', '', 'default')
+          .margin76
+
+          +element-header('dropdown', 'default', '')
           .border-dropdown
             +dropdown-menu('2 спальни, 2 кровати...', 'dropdown-default')
 
-          +element-header('dropdown', 'default', '')
+          +element-header('dropdown', 'expanded', '')
           .border-dropdown.shadow
             +dropdown-menu('2 спальни, 2 кровати...', 'dropdown-default-expand')
             .dropdown-menu-list
@@ -72,6 +80,8 @@ block content
                 +listItem('спальни', '2')
                 +listItem('кровати', '2')
                 +listItem('ванные комнаты', '0')
+
+          .margin51
 
           .checkbox-expand
             +checkbox-expand('expandable checkbox list', 'expand-checkbox')
@@ -84,6 +94,8 @@ block content
               +checkbox('Шампунь', 'shampoo1', checked)
               +checkbox('Телевизор', 'tv2', checked)
               +checkbox('Шампунь', 'shampoo2', checked)
+
+          .margin42
 
           .checkbox-expand
             +checkbox-expand('expandable checkbox list', 'expand-checkbox1', 'checked')
@@ -106,7 +118,9 @@ block content
         ul(style='padding: 0; margin: 8px, 0, 0')
           +checkbox('Можно курить', 'smoking')
           +checkbox('Можно с питомцами', 'pets', 'checked')
-          +checkbox('Можно пригласить гостей (до 10 человек)', 'guest', 'checked')
+          +checkbox('Можно пригласить гостей (до 10 человек)', 'guest', 'checked') </ul>
+
+        .margin22
 
         +element-header('radio buttons', textText, forId)
         .radio-buttons
@@ -128,6 +142,8 @@ block content
           +rate-button('rate-btn1', checked5, 'checked', 'star01', 'star02', 'star03', 'star04', 'star05')
           +rate-button('rate-btn2', 'checked', checked5, 'star11', 'star12', 'star13', 'star14', 'star15')
 
+        .margin173
+
         +element-header('dropdown', textText, forId)
         .border-dropdown.shadow
           +dropdown-menu('Сколько гостей', 'dropdown')
@@ -137,6 +153,8 @@ block content
               +listItem('дети', '0')
               +listItem('младенцы', '0')
               include elements/dropdown-menu-list-bottom-btn
+
+        .margin78
 
         +element-header('rich checkbox buttons', textText, forId)
         ul.rich-checkbox

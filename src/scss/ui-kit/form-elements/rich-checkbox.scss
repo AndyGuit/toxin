@@ -3,6 +3,10 @@
   padding: 0;
   &__element {
     display: flex;
+
+    &:first-of-type {
+      width: 220px;
+    }
   }
 
   &__checkbox {}
@@ -10,9 +14,9 @@
   &__text {
     @extend %body;
 
-    max-width: 266px;
+    max-width: 224px;
 
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 
   &__header {
@@ -27,7 +31,7 @@
   &__label {
     line-height: 14px;
     font-weight: 400;
-
-    cursor: pointer;
+    font-size: 12px;
+    margin: 4px 0;
   }
 }

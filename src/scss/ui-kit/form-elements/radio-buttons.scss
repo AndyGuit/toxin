@@ -1,4 +1,5 @@
 .radio-buttons {
+  margin-bottom: 16px;
   &__head {
     @extend %h3;
     text-transform: uppercase;
@@ -8,6 +9,7 @@
   &__element {
     display: inline-flex;
     align-items: center;
+    margin-top: 10px;
   }
 
   &__container {}

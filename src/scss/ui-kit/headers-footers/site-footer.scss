@@ -1,7 +1,5 @@
 .site-footer {
   width: 100%;
-
-  margin-top: 40px;
   &-top {
     height: 372px;
     background-color: #fff;
@@ -17,14 +15,14 @@
     & p {
       @extend %body;
       color: $ds75;
-      margin: 20px 0 0 0;
+      margin: 13px 0 0 0;
     }
   }
 
   &__links {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    height: 168px;
     & a:first-of-type {
       @extend %h3;
       font-weight: 700;

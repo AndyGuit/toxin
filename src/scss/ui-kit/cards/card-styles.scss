@@ -1,7 +1,7 @@
 .cards1 {
   max-width: 380px;
 
-  margin: 72px 0 0 140px;
+  margin: 71px 0 0 140px;
 }
 
 .cards2 {
@@ -9,7 +9,7 @@
 }
 
 .cards3 {
-  margin: 72px 140px 0 0;
+  margin: 68px 140px 0 0;
 }
 
 .card-date-picker {
@@ -30,7 +30,7 @@
 
   border-radius: 4px;
 
-  padding: 40px 30px 30px 30px;
+  padding: 38px 30px 30px 30px;
   margin-bottom: 40px;
 }
 
@@ -44,6 +44,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  max-width: 318px;
 
   height: 44px;
 }
@@ -60,10 +62,11 @@
 
   align-items: flex-end;
   &__number {
+    @extend %h1;
     margin: 0;
 
     &:before {
-      content: '№';
+      content: '№ ';
 
       @extend %body;
       font-weight: 700;
@@ -107,6 +110,12 @@
 
     @extend %body;
     color: $ds75;
+    line-height: 18px;
+
+    &:last-child {
+      margin: 31px 0 21px 0;
+      width: 328px;
+    }
   }
 
   &__service-charge {
@@ -115,10 +124,16 @@
     position: relative;
   }
 
+  &__price, 
+  &__sum,
+  &__service-charge {
+    margin: 16px 0 0 0;
+  }
+
   &__info {
     position: absolute;
-    top: 3px;
-    right: -27px;
+    top: 0;
+    right: -26px;
   }
 
   &__total-word {
@@ -137,5 +152,5 @@
   width: 173px;
   border-bottom: 1px dotted $ds25;
   position: relative;
-  bottom: 6px;
+  bottom: 4px;
 }

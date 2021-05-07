@@ -27,17 +27,19 @@ block content
 
           .dropdown-date-wrapper
             .dropdown-date
-              +element-header('date Dropdown', '', '')
+              +element-header('прибытие', '', '')
               .border-dropdown
                 +dropdown-menu('ДД.ММ.ГГГГ', 'date-dropdown')
             .dropdown-date
-              +element-header('date Dropdown', '', '')
+              +element-header('выезд', '', '')
               .border-dropdown
-                +dropdown-menu('19.08.2019', 'date-dropdown-2')
+                +dropdown-menu('ДД.ММ.ГГГГ', 'date-dropdown-2')
 
           +element-header('гости', '', '')
           .border-dropdown
             +dropdown-menu('Сколько гостей', 'drop')
+
+          .margin27
 
           +btn-click-me('подобрать номер', 'btn-click-me__btn-sale')
 
@@ -46,10 +48,15 @@ block content
         .card-wrapper.shadow
           h1.card-header Регистрация аккаунта
 
+          .margin22
+
           .border
-            +element-input('text', 'имя', id, img, value)
+            +element-input('text', 'Имя', id, img, value)
+
+          .margin10
+
           .border
-            +element-input('text', 'фамилия', id, img, value)
+            +element-input('text', 'Фамилия', id, img, value)
 
           .radio-buttons
             +radio('checked', 'male', 'Мужчина')
@@ -62,12 +69,17 @@ block content
           +element-header('данные для входа в сервис', textText, forId)
           .border
             +element-input('text', 'Email', id, img, value)
+
+          .margin10
+
           .border
             +element-input('password', 'Пароль', id, img, value)
           .toggle
             +toggle('Получать спецпредложения', 'toggle1', checked)
 
           +btn-click-me('перейти к оплате', 'btn-click-me__btn-sale')
+
+          .margin27
 
           .sign-in-wrapper
             a.sign-up-already Уже есть аккаунт на Toxin
@@ -97,11 +109,17 @@ block content
 
         .card-wrapper.shadow
           h1.card-header Войти
+
+          .margin22
+
           .border
             +element-input('text', 'Email', id, img, value)
+          .margin10
           .border
             +element-input('password', 'Пароль', id, img, value)
+          .margin20
           +btn-click-me('войти', 'btn-click-me__btn-sale')
+          .margin31
           .sign-in-wrapper
             a.sign-up-already Нет аккаунта на Toxin?
             +btn-click-me('создать', 'btn-click-me__btn-border')
@@ -111,7 +129,7 @@ block content
         .card-date-picker
           .card-date-picker__header
             button.card-date-picker__arrow-back
-            p.card-date-picker__month Август
+            p.card-date-picker__month Август 2019
             button.card-date-picker__arrow-forward(src="../../../../static/img/arrow_forward_purple.svg")
           .card-date-picker__week-wrap
             +card-date-picker__day('Пн', background)
@@ -161,7 +179,9 @@ block content
             +card-date-picker__day('30', background)
             +card-date-picker__day('31', background)
             +card-date-picker__day('1', background, 'card-date-picker__day-wrap_ds25')
-          include ../form-elements/elements/dropdown-menu-list-bottom-btn
+          .card-date-picker__bottom-btn
+            button.dropdown-menu-list-bottom-btn__clear(type="submit") очистить
+            button.dropdown-menu-list-bottom-btn__accept(type="submit") применить
 
-        +card-room('888', '9 900₽', '145', '../../../static/img/room1.png')
+        +card-room('888', '9 990₽', '145', '../../../static/img/room1.png')
         +card-room('840', '9 900₽', '65', '../../../static/img/room2.png')

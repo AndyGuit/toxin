@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 
   margin-top: 12px;
 }
@@ -43,44 +43,16 @@
   &__btn-border {
     @extend %h3;
     color: $purple;
-    width: 95px;
-    height: 40px;
-    border: 2px solid #fff;
-    border-radius: 22px;
+    width: 99px;
+    height: 44px;
+    border: none;
     background-color: #fff;
     text-transform: uppercase;
+    background-image: url(../../static/img/btn-border.svg);
+    background-position: center;
 
-    position: relative;
-
-    top: 2px;
-    left: 2px;
-    
-    margin-left: 1px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      bottom: -4px;
-      left: -4px;
-      right: -4px;
-      background: $purple-gradient;
-      z-index: -1;
-      border-radius: 22px;
-    }
-
-    &:active::after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      bottom: -4px;
-      left: -4px;
-      right: -4px;
-      background: $purple-gradient;
-      z-index: -1;
-      border-radius: 22px;
-
-      opacity: 0.5;
+    &:active {
+      background-image: url(../../static/img/btn-border-active.svg);
     }
   }
 

@@ -58,7 +58,7 @@
 
     z-index: 1;
 
-    bottom: 15px;
+    bottom: 12px;
     right: 15px;
 
     &-btn {
@@ -107,7 +107,11 @@
   }
 
   &__info {
-    padding: 14px 17px 20px;
+    padding: 17px 19px 20px;
+
+    & .number-info-header > h1 {
+      font-size: 20px;
+    }
   }
 
   &__hr {
@@ -116,13 +120,14 @@
     background-color: $ds10;
     height: 1px;
     width: 234px;
-    margin: 10px 0 8px;
+    margin: 8px 0 10px;
   }
 
   &__rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 3px;
   }
 
   &__reviews {

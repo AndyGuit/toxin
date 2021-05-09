@@ -49,7 +49,7 @@
     }
 
     &:checked~.toggle__dot {
-      background-color: #bc9cff;
+      background: $purple-gradient;
       margin: 4px 4px 4px 24px;
     }
   }

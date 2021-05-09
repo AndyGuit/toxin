@@ -1,7 +1,6 @@
 extends ../../layout
 
 include ../form-elements/elements/button-click-me
-include elements/site-footer__links
 include ../form-elements/elements/element-input
 
 block vars
@@ -14,16 +13,7 @@ block content
 
     .margin60
 
-    .site-header
-      img.site-header__logo(src="../../../static/img/logo.svg", alt="toxin")
-      .site-header__nav-bar
-        a.site-header__link(href="#") О нас
-        a.site-header__link-dropdown(href="#") Услуги
-        a.site-header__link(href="#") Вакансии
-        a.site-header__link(href="#") Новости
-        a.site-header__link-dropdown(href="#") Соглашения
-        +btn-click-me('Войти', 'btn-click-me__btn-border')
-        +btn-click-me('Зарегистрироваться', 'btn-click-me__btn')
+    include elements/site-header
 
     .margin40
 
@@ -40,37 +30,6 @@ block content
 
     .margin40
 
-    .site-footer.shadow
-      .site-footer-top
-        .site-footer__toxin
-          img(src="../../../static/img/logo.svg", alt="toxin")
-          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-        +site-footer__links('навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги')
-        +site-footer__links('о нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы')
-        +site-footer__links('Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами', link5)
-        .site-footer__subscribe
-          p Подписка
-          p Получайте специальные предложения и новости сервиса
-          .border
-            +element-input('text', 'Email', 'email', '../../../static/img/arrow_forward_purple.svg')
-      .site-footer-bottom
-        p.site-footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-        .site-footer__social-links
-          a(href="#")
-            img(src="../../../static/img/twitter.svg", alt="")
-          a(href="#")
-            img(src="../../../static/img/facebook.svg", alt="")
-          a(href="#")
-            img(src="../../../static/img/instagram.svg", alt="")
+    include elements/site-footer
 
-    .site-card
-      .site-card__logo
-        img.site-header__logo(src="../../../static/img/logo.svg", alt="toxin")
-      p.site-footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-        .site-footer__social-links
-          a(href="#")
-            img(src="../../../static/img/twitter.svg", alt="")
-          a(href="#")
-            img(src="../../../static/img/facebook.svg", alt="")
-          a(href="#")
-            img(src="../../../static/img/instagram.svg", alt="")
+    include elements/site-card

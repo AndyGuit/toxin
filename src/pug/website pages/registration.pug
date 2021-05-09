@@ -1,0 +1,58 @@
+extends ../layout
+include ../ui-kit/form-elements/elements/button-click-me
+include ../ui-kit/form-elements/elements/element-header
+include ../ui-kit/form-elements/elements/element-input
+include ../ui-kit/form-elements/elements/dropdown-menu
+include ../ui-kit/form-elements/elements/radio-button
+include ../ui-kit/form-elements/elements/toggle
+
+block vars
+  - pageTitle = 'Registration';
+
+block content
+  .container
+
+    include ../ui-kit/headers-footers/elements/site-header
+
+    .background-photo
+      .card-wrapper.shadow
+        h1.card-header Регистрация аккаунта
+
+        .margin22
+
+        .border
+          +element-input('text', 'Имя', id, img, value)
+
+        .margin10
+
+        .border
+          +element-input('text', 'Фамилия', id, img, value)
+
+        .radio-buttons
+          +radio('checked', 'male', 'Мужчина')
+          +radio(checked, 'female', 'Женщина')
+
+        +element-header('дата рождения', textText, forId)
+        .border
+          +element-input('text', 'ДД.ММ.ГГГГ', id, img, value)
+
+        +element-header('данные для входа в сервис', textText, forId)
+        .border
+          +element-input('text', 'Email', id, img, value)
+
+        .margin10
+
+        .border
+          +element-input('password', 'Пароль', id, img, value)
+        .toggle
+          +toggle('Получать спецпредложения', 'toggle1', checked)
+
+        +btn-click-me('перейти к оплате', 'btn-click-me__btn-sale')
+
+        .margin27
+
+        .sign-in-wrapper
+          a.sign-up-already Уже есть аккаунт на Toxin
+          +btn-click-me('войти', 'btn-click-me__btn-border')
+
+    include ../ui-kit/headers-footers/elements/site-footer

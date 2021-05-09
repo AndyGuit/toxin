@@ -1,7 +1,41 @@
 extends ../layout
+include ../ui-kit/form-elements/elements/button-click-me
+include ../ui-kit/form-elements/elements/element-header
+include ../ui-kit/form-elements/elements/element-input
+include ../ui-kit/form-elements/elements/dropdown-menu
 
 block vars
   - pageTitle = 'Landing Page';
 
 block content
   .container
+
+    include ../ui-kit/headers-footers/elements/site-header
+
+    .background-container
+      .card-wrapper.shadow.card-absolute
+        h1.card-header Найдём номера под ваши пожелания
+
+        .dropdown-date-wrapper
+          .dropdown-date
+            +element-header('прибытие', '', '')
+            .border-dropdown
+              +dropdown-menu('ДД.ММ.ГГГГ', 'date-dropdown')
+          .dropdown-date
+            +element-header('выезд', '', '')
+            .border-dropdown
+              +dropdown-menu('ДД.ММ.ГГГГ', 'date-dropdown-2')
+
+        +element-header('гости', '', '')
+        .border-dropdown
+          +dropdown-menu('Сколько гостей', 'drop')
+
+        .margin27
+
+        +btn-click-me('подобрать номер', 'btn-click-me__btn-sale')
+
+      .langing-page__text
+        p Лучшие номера для вашей работы,
+        p отдыха и просто вдохновения
+
+    include ../ui-kit/headers-footers/elements/site-footer

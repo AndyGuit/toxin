@@ -1,12 +1,12 @@
 include like-button
 
-.review-wrapper
+mixin review(img, name, date, likes, idLike, checked, text)
   .review-header
     .review-header__img
-      img(src="../../../static/img/review-user1.svg")
+      img(src=img)
     .review-header__head
-      p.review-header__name Мурад Сарафанов
-      p.review-header__date 5 дней назад
+      p.review-header__name #{name}
+      p.review-header__date #{date}
   .review-footer
-    +like-btn('12', 'like-3', 'checked')
-    p.review-footer__text-review Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+    +like-btn(likes, idLike, checked)
+    p.review-footer__text-review #{text}

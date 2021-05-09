@@ -14,6 +14,7 @@ include elements/rate-button
 include elements/rich-checkbox
 include elements/button-click-me
 include elements/bullet-list-element
+include elements/review-element
 
 block vars
   - pageTitle = 'Form Elements';
@@ -163,7 +164,8 @@ block content
           +rich-checkbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor', checked)
           +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledPeople', checked)
 
-        include elements/review-element
+        .review-wrapper
+          +review('../../../static/img/review-user1.svg', 'Мурад Сарафанов', '5 дней назад', '12', 'like-03', 'checked', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
 
       .right-section
 

@@ -1,0 +1,36 @@
+.room-search-wrapper {
+  display: flex;
+}
+
+.room-search-left {
+  width: 100%;
+  max-width: 266px;
+  margin-left: 140px;
+}
+
+.input-text-bottom {
+  @extend %h3;
+  color: $ds50;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.room-search-right{
+  width: 100%;
+  max-width: 834px;
+  margin-left: 60px;
+  &__header {
+    @extend %h1;
+  }
+}
+
+.room-cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-search-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

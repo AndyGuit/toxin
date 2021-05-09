@@ -1,0 +1,87 @@
+extends ../layout
+include ../ui-kit/form-elements/elements/button-click-me
+include ../ui-kit/form-elements/elements/element-header
+include ../ui-kit/form-elements/elements/element-input
+include ../ui-kit/form-elements/elements/dropdown-menu
+include ../ui-kit/form-elements/elements/checkbox
+include ../ui-kit/form-elements/elements/rich-checkbox
+include ../ui-kit/form-elements/elements/checkbox-expand
+include ../ui-kit/form-elements/elements/rate-button
+include ../ui-kit/cards/elements/number-info-header
+include ../ui-kit/cards/elements/card-room
+
+block vars
+  - pageTitle = 'Search Room';
+
+block content
+  .container
+
+    include ../ui-kit/headers-footers/elements/site-header
+
+    .room-search-wrapper
+      .room-search-left
+        +element-header('даты пребывания в отеле', '', 'filter-dropdown')
+        .border-dropdown
+          +dropdown-menu('19 авг - 23 авг', 'dates-dropdown')
+
+        +element-header('гости', '', '')
+        .border-dropdown
+          +dropdown-menu('3 гостя, 1 младенец', 'guests-dropdown')
+
+        +element-header('диапазон цены', '5 000₽ - 10 000₽', forId)
+        input(type="range")
+        p.input-text-bottom Стоимость за сутки пребывания в номере
+
+        +element-header('правила дома', textText, forId)
+        ul(style='padding: 0; margin: 8px, 0, 0')
+          +checkbox('Можно курить', 'smoking')
+          +checkbox('Можно с питомцами', 'pets', 'checked')
+          +checkbox('Можно пригласить гостей (до 10 человек)', 'guest', 'checked') </ul>
+
+        +element-header('доступность', textText, forId)
+        ul.rich-checkbox
+          +rich-checkbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor', checked)
+          +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledPeople', checked)
+
+        +element-header('удобства номера', '', '')
+        .border-dropdown
+          +dropdown-menu('2 спальни, 2 кровати...', 'comfort-dropdown')
+
+        .margin31
+
+        .checkbox-expand
+          +checkbox-expand('дополнительные удобства', 'expand-checkbox')
+          ul.checkbox-expand__list
+            +checkbox('Завтрак', 'breakfast', checked)
+            +checkbox('Письменный стол', 'table', 'checked')
+            +checkbox('Стул для кормления', 'chair', 'checked')
+            +checkbox('Кроватка', 'childbed', 'checked')
+            +checkbox('Телевизор', 'tx1', checked)
+            +checkbox('Шампунь', 'shampoo1', checked)
+            +checkbox('Телевизор', 'tv2', checked)
+            +checkbox('Шампунь', 'shampoo2', checked)
+
+
+      .room-search-right
+        h1.room-search-right__header Номера, которые мы для вас подобрали
+        .room-cards-wrapper
+          +card-room('888', '9 990₽', '145', '../../../static/img/room1.png')
+          +card-room('840', '9 990₽', '65', '../../../static/img/room2.png')
+          +card-room('980', '8 500₽', '35', '../../../static/img/room3.png')
+        .room-cards-wrapper
+          +card-room('856', '7 300₽', '19', '../../../static/img/room4.png')
+          +card-room('740', '6 000₽', '44', '../../../static/img/room5.png')
+          +card-room('982', '5 800₽', '56', '../../../static/img/room6.png')
+        .room-cards-wrapper
+          +card-room('678', '5 500₽', '45', '../../../static/img/room7.png')
+          +card-room('450', '5 300₽', '39', '../../../static/img/room8.png')
+          +card-room('350', '5 000₽', '77', '../../../static/img/room9.png')
+        .room-cards-wrapper
+          +card-room('666', '5 000₽', '25', '../../../static/img/room10.png')
+          +card-room('444', '5 000₽', '15', '../../../static/img/room11.png')
+          +card-room('352', '5 000₽', '55', '../../../static/img/room12.png')
+        .room-search-pagination
+          include ../ui-kit/form-elements/elements/pagination
+          p.pagination__text 1 – 12 из 100+ вариантов аренды
+
+    include ../ui-kit/headers-footers/elements/site-footer

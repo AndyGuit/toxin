@@ -75,7 +75,7 @@
     }
 
     &:after {
-      content: 'люкс';
+      content: ' люкс';
 
       @extend %h3;
       color: $purple;

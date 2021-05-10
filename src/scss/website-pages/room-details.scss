@@ -56,9 +56,9 @@
   }
 
   &__votes-block {
-    background: url(../../../static/img/ellipse-yellow.svg) left no-repeat,
-    url(../../../static/img/ellipse-purple.svg) right top no-repeat,
-    url(../../../static/img/ellipse-green.svg) right bottom no-repeat;
+    background: url(../../static/img/ellipse-yellow.svg) left no-repeat,
+    url(../../static/img/ellipse-purple.svg) right top no-repeat,
+    url(../../static/img/ellipse-green.svg) right bottom no-repeat;
     width: 120px;
     height: 120px;
     display: flex;
@@ -88,16 +88,16 @@
     padding: 0 0 0 30px;
 
     & li:nth-child(1) {
-      list-style-image: url(../../../static/img/dot-great.svg);
+      list-style-image: url(../../static/img/dot-great.svg);
     }
     & li:nth-child(2) {
-      list-style-image: url(../../../static/img/dot-good.svg);
+      list-style-image: url(../../static/img/dot-good.svg);
     }
     & li:nth-child(3) {
-      list-style-image: url(../../../static/img/dot-satisfied.svg);
+      list-style-image: url(../../static/img/dot-satisfied.svg);
     }
     & li:nth-child(4) {
-      list-style-image: url(../../../static/img/dot-disapointed.svg);
+      list-style-image: url(../../static/img/dot-disapointed.svg);
     }
   }
   &__block1{

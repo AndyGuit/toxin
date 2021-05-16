@@ -1,0 +1,31 @@
+extends ../layout
+include ../ui-kit/form-elements/elements/button-click-me
+include ../ui-kit/form-elements/elements/element-input
+
+block vars
+  - pageTitle = 'Sign In';
+
+block content
+  .container
+
+    include ../ui-kit/headers-footers/elements/site-header
+
+    .background-photo
+      .card-wrapper.shadow
+        h1.card-header Войти
+
+        .margin22
+
+        .border
+          +element-input('text', 'Email', id, img, value)
+        .margin10
+        .border
+          +element-input('password', 'Пароль', id, img, value)
+        .margin20
+        +btn-click-me('войти', 'btn-click-me__btn-sale')
+        .margin31
+        .sign-in-wrapper
+          a.sign-up-already Нет аккаунта на Toxin?
+          +btn-click-me('создать', 'btn-click-me__btn-border')
+
+    include ../ui-kit/headers-footers/elements/site-footer

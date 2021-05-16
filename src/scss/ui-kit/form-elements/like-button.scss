@@ -1,4 +1,6 @@
 .like-button {
+  margin-top: 11px;
+  margin-bottom: 16px;
   &__head {
     text-transform: uppercase;
     @extend %h3;
@@ -10,7 +12,7 @@
     display: inline-flex;
     align-items: center;
 
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   &__checkbox {

@@ -1,0 +1,10 @@
+include checkbox
+
+mixin rich-checkbox(head, text, id, checked)
+  li.rich-checkbox__element
+    .rich-checkbox__checkbox
+      input.checkbox__checkbox(type="checkbox", id=id, checked=checked)
+      span.checkbox__new-checkbox
+    .rich-checkbox__text
+      label.rich-checkbox__header(for=id) #{head}
+      p.rich-checkbox__label #{text}

@@ -1,0 +1,127 @@
+.card-date-picker {
+  margin-bottom: 40px;
+  &__header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    @extend %h2;
+
+    margin-bottom: 30px;
+  }
+
+  &__arrow-back,
+  &__arrow-forward {
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    background: url("../../static/img/arrow_forward_purple.svg") no-repeat center;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__arrow-back {
+    transform: rotate(180deg);
+  }
+
+  &__month {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__week-wrap {
+    @extend %h3;
+    color: $purple;
+    text-transform: none;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__day {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__day-wrap {
+    display: flex;
+    align-items: center;
+    @extend %h3;
+    font-weight: 400;
+    color: $ds50;
+  }
+
+  &__day-wrap_ds25 {
+    color: $ds25;
+  }
+
+  &__bottom-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px 0 0 0;
+  }
+}
+
+.datepick-element-background {
+  &__green {
+    background: $green-gradient;
+    border-radius: 22px;
+    color: #fff;
+    font-weight: 700;
+  }
+  &__purple {
+    background: $purple-gradient;
+    border-radius: 22px;
+    color: #fff;
+    font-weight: 700;
+
+    position: relative;
+
+    & p {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__purpleOp {
+    background: $purple-gradient-op;
+    background-size: 40px;
+    overflow: hidden;
+  }
+}
+
+.before-date {
+  &:before {
+    content: '';
+    background: $purple-gradient-op;
+    position: absolute;
+    width: 19.6px;
+    height: 40px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+  }
+}
+
+.after-date {
+  &:after {
+    content: '';
+    background: $purple-gradient-op;
+    position: absolute;
+    width: 19.6px;
+    height: 40px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+}

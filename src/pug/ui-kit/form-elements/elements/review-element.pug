@@ -1,0 +1,12 @@
+include like-button
+
+mixin review(img, name, date, likes, idLike, checked, text)
+  .review-header
+    .review-header__img
+      img(src=img)
+    .review-header__head
+      p.review-header__name #{name}
+      p.review-header__date #{date}
+  .review-footer
+    +like-btn(likes, idLike, checked)
+    p.review-footer__text-review #{text}

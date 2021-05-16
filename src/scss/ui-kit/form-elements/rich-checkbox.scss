@@ -1,0 +1,37 @@
+.rich-checkbox {
+  list-style: none;
+  padding: 0;
+  &__element {
+    display: flex;
+
+    &:first-of-type {
+      width: 220px;
+    }
+  }
+
+  &__checkbox {}
+
+  &__text {
+    @extend %body;
+
+    max-width: 224px;
+
+    margin-bottom: 10px;
+  }
+
+  &__header {
+    line-height: 18px;
+    font-weight: 700;
+
+    display: block;
+
+    cursor: pointer;
+  }
+
+  &__label {
+    line-height: 14px;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 4px 0;
+  }
+}

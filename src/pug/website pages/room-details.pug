@@ -1,0 +1,96 @@
+extends ../layout
+include ../ui-kit/form-elements/elements/button-click-me
+include ../ui-kit/form-elements/elements/dropdown-menu
+include ../ui-kit/form-elements/elements/element-header
+include ../ui-kit/form-elements/elements/element-input
+include ../ui-kit/form-elements/elements/specials
+include ../ui-kit/form-elements/elements/review-element
+include ../ui-kit/form-elements/elements/bullet-list-element
+include ../ui-kit/cards/elements/number-info-header
+
+block vars
+  - pageTitle = 'Room Details';
+
+block content
+  .container
+
+    include ../ui-kit/headers-footers/elements/site-header
+
+    .room-photos
+      .room-photos__block1
+        img(src="../../../static/img/room-detail-1.png")
+      .room-photos__block2
+        img(src="../../../static/img/room-detail-2.png")
+        img(src="../../../static/img/room-detail-3.png")
+
+    .room-info-wrapper
+
+      .room-details-wrapper
+        .room-details__block1
+
+          .room-details__specials
+            h1.room-details__header Сведения о номере
+            .specials
+              +specials('../../../static/img/emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
+              +specials('../../../static/img/city.svg', 'Удобство', 'Окно в каждой из спален')
+              +specials('../../../static/img/heat.svg', 'Уют', 'Номер оснащён камином')
+
+          .room-details__impressions
+            h1.room-details__header Впечатления от номера
+
+            .room-details__votes
+              .room-details__votes-block
+                .room-details__votes-number
+                  h1 260
+                  p Голосов
+              ul.room-details__votes-list
+                li Великолепно
+                li Хорошо
+                li Удовлетворительно
+                li Разочарован
+
+        .room-details__block2
+          .room-details__reviews
+            h1.room-details__header Отзывы посетителей номера
+            +review('../../../static/img/review-user1.svg', 'Мурад Сарафанов', '5 дней назад', '12', 'like-03', 'checked', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+            .margin20
+            +review('../../../static/img/review-user2.svg', 'Патрисия Стёклышкова', 'Неделю назад', '2', 'like-04', checked, 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+          .room-details__flex
+            .room-details__rules
+              h1.room-details__header Правила
+              .bullet-list
+                ul.bullet-list__list
+                  +bullet-list__element('Нельзя с питомцами')
+                  +bullet-list__element('Без вечеринок и мероприятий')
+                  +bullet-list__element('Время прибытия — после 13:00, а выезд до 12:00')
+            .room-details__cancelation
+              h1.room-details__header Правила
+              p.room-details__cancelation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+
+      .room-card
+
+        .margin20
+
+        .card-wrapper.shadow
+          +number-info-header('888', '9 990₽')
+
+          .dropdown-date-wrapper
+            .dropdown-date
+              +element-header('прибытие', '', 'arrival')
+              .border-dropdown
+                +dropdown-menu('19.08.2019', 'arrival')
+            .dropdown-date
+              +element-header('выезд', '', 'departure')
+              .border-dropdown
+                +dropdown-menu('23.08.2019', 'departure')
+
+          +element-header('гости', '', '')
+          .border-dropdown
+            +dropdown-menu('3 гостя', 'drop2')
+
+          include ../ui-kit/cards/elements/number-price-info
+
+          +btn-click-me('забронировать', 'btn-click-me__btn-sale')
+
+    include ../ui-kit/headers-footers/elements/site-footer

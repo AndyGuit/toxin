@@ -20,6 +20,11 @@ body {
   width: 100%;
   max-width: 1440px;
 }
+
+.body-grey {
+  background-color: #f4f4f6;
+}
+
 .logo {
   margin: 30px 0 0 30px;
 }
@@ -41,7 +46,7 @@ body {
 ==================== */
 .input-section {
   margin-left: 141px;
-  margin-top: 85px;
+  margin-top: 40px;
   margin-bottom: 132px;
 
   width: 320px;
@@ -55,6 +60,8 @@ body {
   width: 267px;
 }
 
+@import "ui-kit/form-elements/extra-margins.scss";
+
 @import "ui-kit/form-elements/element-header.scss";
 
 @import "ui-kit/form-elements/border.scss";
@@ -66,7 +73,7 @@ body {
 .dropdown-date-wrapper {
   display: inline-flex;
   justify-content: space-between;
-  width: inherit;
+  width: 320px;
 }
 
 .dropdown-date {
@@ -83,7 +90,7 @@ body {
 
 
 .middle-section {
-  margin-top: 85px;
+  margin-top: 40px;
   margin-right: 72px;
   margin-left: 126px;
 
@@ -102,3 +109,68 @@ body {
 @import "ui-kit/form-elements/star-rating.scss";
 
 @import "ui-kit/form-elements/dropdown-menu-list-bottom-btn.scss";
+
+@import "ui-kit/form-elements/rich-checkbox.scss";
+
+@import "ui-kit/form-elements/review-element.scss";
+
+.right-section {
+  width: 320px;
+
+  margin-top: 41px;
+  margin-right: 141px;
+}
+
+.range-slider {
+  max-width: 266px;
+  margin-bottom: 26px;
+}
+
+@import "ui-kit/form-elements/button-click-me.scss";
+
+@import "ui-kit/form-elements/pagination.scss";
+
+@import "ui-kit/form-elements/bullet-list.scss";
+
+
+
+/* Cards
+============================ */
+
+@import "ui-kit/cards/card-styles.scss";
+
+@import "ui-kit/cards/card-date-picker.scss";
+
+@import "ui-kit/cards/card-room.scss";
+
+
+
+/* Headers & Footers
+============================ */
+
+@import "ui-kit/headers-footers/site-header.scss";
+
+@import "ui-kit/headers-footers/site-footer.scss";
+
+.site-card {
+  width: 768px;
+  height: 367px;
+  margin: 20px auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 0;
+}
+
+
+/* Landing Page
+================================= */
+
+@import "website-pages/landing-page.scss";
+
+@import "website-pages/search-room.scss";
+
+@import "website-pages/registration.scss";
+
+@import "website-pages/room-details.scss";

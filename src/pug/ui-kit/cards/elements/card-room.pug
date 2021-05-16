@@ -1,0 +1,28 @@
+include ../../form-elements/elements/rate-button
+include number-info-header
+
+mixin card-room(number, price, reviews, imgSrc)
+  .card-room.shadow
+    .card-room__picture
+      img(src=imgSrc, alt="")
+      .card-room__prev
+      .card-room__picture-select
+        .card-room__picture-select-btn
+          input(type="radio", name="picture-select"+number, checked="checked")
+          span
+        .card-room__picture-select-btn
+          input(type="radio", name="picture-select"+number)
+          span
+        .card-room__picture-select-btn
+          input(type="radio", name="picture-select"+number)
+          span
+        .card-room__picture-select-btn
+          input(type="radio", name="picture-select"+number)
+          span
+      .card-room__next
+    .card-room__info
+      +number-info-header(number, price)
+      hr.card-room__hr
+      .card-room__rating
+        +rate-button('rate-btn'+number, 'checked', checked4, 'star01-'+number, 'star02-'+number, 'star03-'+number, 'star04-'+number, 'star05-'+number)
+        p.card-room__reviews <span>#{reviews}</span> Отзывов

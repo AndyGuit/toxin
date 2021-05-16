@@ -1,0 +1,98 @@
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+  margin-top: 12px;
+}
+
+.buttons {
+  max-width: 218px;
+}
+
+.btn-click-me {
+  &__btn {
+    @extend %h3;
+    color: #fff;
+    width: fit-content;
+    padding: 0 20px;
+    height: 44px;
+    border-radius: 22px;
+    background: $purple-gradient;
+    border: none;
+    text-transform: uppercase;
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &_active {
+      @extend %h3;
+      color: #fff;
+      width: 99px;
+      height: 44px;
+      border-radius: 22px;
+      background: $purple-gradient;
+      border: none;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+  }
+
+  &__btn-border {
+    @extend %h3;
+    color: $purple;
+    width: 99px;
+    height: 44px;
+    border: none;
+    background-color: #fff;
+    text-transform: uppercase;
+    background-image: url(../../static/img/btn-border.svg);
+    background-position: center;
+
+    &:active {
+      background-image: url(../../static/img/btn-border-active.svg);
+    }
+  }
+
+  &__btn-simple {
+    @extend %h3;
+    text-transform: uppercase;
+    color: $purple;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    margin-right: 19px;
+
+    &:active {
+      color: $ds50;
+    }
+  }
+
+  &__btn-sale {
+    @extend %h3;
+    color: #fff;
+    width: 320px;
+    height: 44px;
+    border-radius: 22px;
+    background: $purple-gradient;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+
+    &:after {
+      content: url('../../static/img/arrow_forward_white.svg');
+
+      position: absolute;
+
+      top: 13px;
+      left: 287px;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

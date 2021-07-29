@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Search Room</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="site-header shadow"><img class="site-header__logo" src="../../../static/img/logo.svg" alt="toxin">
+        <div class="site-header__nav-bar"><a class="site-header__link" href="#">О нас</a><a class="site-header__link-dropdown" href="#">Услуги</a><a class="site-header__link" href="#">Вакансии</a><a class="site-header__link" href="#">Новости</a><a class="site-header__link-dropdown" href="#">Соглашения</a>
+          <button class="btn-click-me__btn-border" type="submit">Войти</button>
+          <button class="btn-click-me__btn" type="submit">Зарегистрироваться</button>
+        </div>
+      </div>
+      <div class="room-search-wrapper">
+        <div class="room-search-left">
+          <div class="element-header">
+            <label class="element-header__head" for="filter-dropdown">даты пребывания в отеле</label>
+            <label class="element-header__text" for="filter-dropdown"></label>
+          </div>
+          <div class="border-dropdown">
+            <label class="dropdown-menu__head" for="dates-dropdown">19 авг - 23 авг
+              <label class="dropdown-menu__arrow" for="dates-dropdown">
+                <input class="dropdown-menu__checkbox" type="checkbox" id="dates-dropdown"/><span class="dropdown-menu__button"></span>
+              </label>
+            </label>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head" for="">гости</label>
+            <label class="element-header__text" for=""></label>
+          </div>
+          <div class="border-dropdown">
+            <label class="dropdown-menu__head" for="guests-dropdown">3 гостя, 1 младенец
+              <label class="dropdown-menu__arrow" for="guests-dropdown">
+                <input class="dropdown-menu__checkbox" type="checkbox" id="guests-dropdown"/><span class="dropdown-menu__button"></span>
+              </label>
+            </label>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head">диапазон цены</label>
+            <label class="element-header__text">5 000₽ - 10 000₽</label>
+          </div>
+          <input type="range">
+          <p class="input-text-bottom">Стоимость за сутки пребывания в номере</p>
+          <div class="element-header">
+            <label class="element-header__head">правила дома</label>
+            <label class="element-header__text"></label>
+          </div>
+          <ul style="padding: 0; margin: 8px, 0, 0">
+            <li class="checkbox">
+              <input class="checkbox__checkbox" type="checkbox" id="smoking"/><span class="checkbox__new-checkbox"></span>
+              <label class="checkbox__label" for="smoking">Можно курить</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox__checkbox" type="checkbox" id="pets" checked="checked"/><span class="checkbox__new-checkbox"></span>
+              <label class="checkbox__label" for="pets">Можно с питомцами</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox__checkbox" type="checkbox" id="guest" checked="checked"/><span class="checkbox__new-checkbox"></span>
+              <label class="checkbox__label" for="guest">Можно пригласить гостей (до 10 человек)</label>
+            </li>
+          </ul>
+          <div class="element-header">
+            <label class="element-header__head">доступность</label>
+            <label class="element-header__text"></label>
+          </div>
+          <ul class="rich-checkbox">
+            <li class="rich-checkbox__element">
+              <div class="rich-checkbox__checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="corridor"/><span class="checkbox__new-checkbox"></span>
+              </div>
+              <div class="rich-checkbox__text">
+                <label class="rich-checkbox__header" for="corridor">Широкий коридор</label>
+                <p class="rich-checkbox__label">Ширина коридоров в номере не менее 91 см.</p>
+              </div>
+            </li>
+            <li class="rich-checkbox__element">
+              <div class="rich-checkbox__checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="disabledPeople"/><span class="checkbox__new-checkbox"></span>
+              </div>
+              <div class="rich-checkbox__text">
+                <label class="rich-checkbox__header" for="disabledPeople">Помощник для инвалидов</label>
+                <p class="rich-checkbox__label">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="element-header">
+            <label class="element-header__head" for="">удобства номера</label>
+            <label class="element-header__text" for=""></label>
+          </div>
+          <div class="border-dropdown">
+            <label class="dropdown-menu__head" for="comfort-dropdown">2 спальни, 2 кровати...
+              <label class="dropdown-menu__arrow" for="comfort-dropdown">
+                <input class="dropdown-menu__checkbox" type="checkbox" id="comfort-dropdown"/><span class="dropdown-menu__button"></span>
+              </label>
+            </label>
+          </div>
+          <div class="margin31"></div>
+          <div class="checkbox-expand">
+            <label class="checkbox-expand__header" for="expand-checkbox">дополнительные удобства</label>
+            <input class="checkbox-expand__checkbox" type="checkbox" id="expand-checkbox"/><img class="checkbox-expand__button" src="../../../static/img/dropdown_arrow.svg" alt="arrow"/>
+            <ul class="checkbox-expand__list">
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="breakfast"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="breakfast">Завтрак</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="table" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="table">Письменный стол</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="chair" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="chair">Стул для кормления</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="childbed" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="childbed">Кроватка</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="tx1"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="tx1">Телевизор</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="shampoo1"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="shampoo1">Шампунь</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="tv2"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="tv2">Телевизор</label>
+              </li>
+              <li class="checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="shampoo2"/><span class="checkbox__new-checkbox"></span>
+                <label class="checkbox__label" for="shampoo2">Шампунь</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="room-search-right">
+          <h1 class="room-search-right__header">Номера, которые мы для вас подобрали</h1>
+          <div class="room-cards-wrapper">
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room1.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select888" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select888"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select888"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select888"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">888</h1>
+                  <p class="number-info-header__price">9 990₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn888" id="star05-888" checked="checked"/>
+                    <label for="star05-888"></label>
+                    <input type="radio" name="rate-btn888" id="star04-888"/>
+                    <label for="star04-888"></label>
+                    <input type="radio" name="rate-btn888" id="star03-888"/>
+                    <label for="star03-888"></label>
+                    <input type="radio" name="rate-btn888" id="star02-888"/>
+                    <label for="star02-888"></label>
+                    <input type="radio" name="rate-btn888" id="star01-888"/>
+                    <label for="star01-888"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>145</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room2.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select840" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select840"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select840"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select840"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">840</h1>
+                  <p class="number-info-header__price">9 990₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn840" id="star05-840" checked="checked"/>
+                    <label for="star05-840"></label>
+                    <input type="radio" name="rate-btn840" id="star04-840"/>
+                    <label for="star04-840"></label>
+                    <input type="radio" name="rate-btn840" id="star03-840"/>
+                    <label for="star03-840"></label>
+                    <input type="radio" name="rate-btn840" id="star02-840"/>
+                    <label for="star02-840"></label>
+                    <input type="radio" name="rate-btn840" id="star01-840"/>
+                    <label for="star01-840"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>65</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room3.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select980" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select980"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select980"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select980"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">980</h1>
+                  <p class="number-info-header__price">8 500₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn980" id="star05-980" checked="checked"/>
+                    <label for="star05-980"></label>
+                    <input type="radio" name="rate-btn980" id="star04-980"/>
+                    <label for="star04-980"></label>
+                    <input type="radio" name="rate-btn980" id="star03-980"/>
+                    <label for="star03-980"></label>
+                    <input type="radio" name="rate-btn980" id="star02-980"/>
+                    <label for="star02-980"></label>
+                    <input type="radio" name="rate-btn980" id="star01-980"/>
+                    <label for="star01-980"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>35</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-cards-wrapper">
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room4.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select856" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select856"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select856"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select856"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">856</h1>
+                  <p class="number-info-header__price">7 300₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn856" id="star05-856" checked="checked"/>
+                    <label for="star05-856"></label>
+                    <input type="radio" name="rate-btn856" id="star04-856"/>
+                    <label for="star04-856"></label>
+                    <input type="radio" name="rate-btn856" id="star03-856"/>
+                    <label for="star03-856"></label>
+                    <input type="radio" name="rate-btn856" id="star02-856"/>
+                    <label for="star02-856"></label>
+                    <input type="radio" name="rate-btn856" id="star01-856"/>
+                    <label for="star01-856"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>19</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room5.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select740" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select740"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select740"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select740"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">740</h1>
+                  <p class="number-info-header__price">6 000₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn740" id="star05-740" checked="checked"/>
+                    <label for="star05-740"></label>
+                    <input type="radio" name="rate-btn740" id="star04-740"/>
+                    <label for="star04-740"></label>
+                    <input type="radio" name="rate-btn740" id="star03-740"/>
+                    <label for="star03-740"></label>
+                    <input type="radio" name="rate-btn740" id="star02-740"/>
+                    <label for="star02-740"></label>
+                    <input type="radio" name="rate-btn740" id="star01-740"/>
+                    <label for="star01-740"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>44</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room6.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select982" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select982"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select982"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select982"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">982</h1>
+                  <p class="number-info-header__price">5 800₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn982" id="star05-982" checked="checked"/>
+                    <label for="star05-982"></label>
+                    <input type="radio" name="rate-btn982" id="star04-982"/>
+                    <label for="star04-982"></label>
+                    <input type="radio" name="rate-btn982" id="star03-982"/>
+                    <label for="star03-982"></label>
+                    <input type="radio" name="rate-btn982" id="star02-982"/>
+                    <label for="star02-982"></label>
+                    <input type="radio" name="rate-btn982" id="star01-982"/>
+                    <label for="star01-982"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>56</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-cards-wrapper">
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room7.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select678" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select678"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select678"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select678"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">678</h1>
+                  <p class="number-info-header__price">5 500₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn678" id="star05-678" checked="checked"/>
+                    <label for="star05-678"></label>
+                    <input type="radio" name="rate-btn678" id="star04-678"/>
+                    <label for="star04-678"></label>
+                    <input type="radio" name="rate-btn678" id="star03-678"/>
+                    <label for="star03-678"></label>
+                    <input type="radio" name="rate-btn678" id="star02-678"/>
+                    <label for="star02-678"></label>
+                    <input type="radio" name="rate-btn678" id="star01-678"/>
+                    <label for="star01-678"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>45</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room8.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select450" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select450"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select450"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select450"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">450</h1>
+                  <p class="number-info-header__price">5 300₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn450" id="star05-450" checked="checked"/>
+                    <label for="star05-450"></label>
+                    <input type="radio" name="rate-btn450" id="star04-450"/>
+                    <label for="star04-450"></label>
+                    <input type="radio" name="rate-btn450" id="star03-450"/>
+                    <label for="star03-450"></label>
+                    <input type="radio" name="rate-btn450" id="star02-450"/>
+                    <label for="star02-450"></label>
+                    <input type="radio" name="rate-btn450" id="star01-450"/>
+                    <label for="star01-450"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>39</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room9.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select350" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select350"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select350"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select350"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">350</h1>
+                  <p class="number-info-header__price">5 000₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn350" id="star05-350" checked="checked"/>
+                    <label for="star05-350"></label>
+                    <input type="radio" name="rate-btn350" id="star04-350"/>
+                    <label for="star04-350"></label>
+                    <input type="radio" name="rate-btn350" id="star03-350"/>
+                    <label for="star03-350"></label>
+                    <input type="radio" name="rate-btn350" id="star02-350"/>
+                    <label for="star02-350"></label>
+                    <input type="radio" name="rate-btn350" id="star01-350"/>
+                    <label for="star01-350"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>77</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-cards-wrapper">
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room10.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select666" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select666"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select666"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select666"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">666</h1>
+                  <p class="number-info-header__price">5 000₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn666" id="star05-666" checked="checked"/>
+                    <label for="star05-666"></label>
+                    <input type="radio" name="rate-btn666" id="star04-666"/>
+                    <label for="star04-666"></label>
+                    <input type="radio" name="rate-btn666" id="star03-666"/>
+                    <label for="star03-666"></label>
+                    <input type="radio" name="rate-btn666" id="star02-666"/>
+                    <label for="star02-666"></label>
+                    <input type="radio" name="rate-btn666" id="star01-666"/>
+                    <label for="star01-666"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>25</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room11.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select444" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select444"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select444"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select444"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">444</h1>
+                  <p class="number-info-header__price">5 000₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn444" id="star05-444" checked="checked"/>
+                    <label for="star05-444"></label>
+                    <input type="radio" name="rate-btn444" id="star04-444"/>
+                    <label for="star04-444"></label>
+                    <input type="radio" name="rate-btn444" id="star03-444"/>
+                    <label for="star03-444"></label>
+                    <input type="radio" name="rate-btn444" id="star02-444"/>
+                    <label for="star02-444"></label>
+                    <input type="radio" name="rate-btn444" id="star01-444"/>
+                    <label for="star01-444"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>15</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-room shadow">
+              <div class="card-room__picture"><img src="../../../static/img/room12.png" alt=""/>
+                <div class="card-room__prev"></div>
+                <div class="card-room__picture-select">
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select352" checked="checked"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select352"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select352"/><span></span>
+                  </div>
+                  <div class="card-room__picture-select-btn">
+                    <input type="radio" name="picture-select352"/><span></span>
+                  </div>
+                </div>
+                <div class="card-room__next"></div>
+              </div>
+              <div class="card-room__info">
+                <div class="number-info-header">
+                  <h1 class="number-info-header__number">352</h1>
+                  <p class="number-info-header__price">5 000₽<span class="number-info-header__per-day"> в сутки</span></p>
+                </div>
+                <hr class="card-room__hr"/>
+                <div class="card-room__rating">
+                  <div class="star-rating__element">
+                    <input type="radio" name="rate-btn352" id="star05-352" checked="checked"/>
+                    <label for="star05-352"></label>
+                    <input type="radio" name="rate-btn352" id="star04-352"/>
+                    <label for="star04-352"></label>
+                    <input type="radio" name="rate-btn352" id="star03-352"/>
+                    <label for="star03-352"></label>
+                    <input type="radio" name="rate-btn352" id="star02-352"/>
+                    <label for="star02-352"></label>
+                    <input type="radio" name="rate-btn352" id="star01-352"/>
+                    <label for="star01-352"></label>
+                  </div>
+                  <p class="card-room__reviews"><span>55</span> Отзывов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-search-pagination">
+            <div class="pagination-wrapper">
+              <div class="pagination-btn arrow-backward"><a class="pagination-btn__link" href="#"><img src="../../../static/img/arrow_forward_white.svg" alt=""></a></div>
+              <div class="pagination-btn active-link"><a class="pagination-btn__link" href="#">1</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">2</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">3</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">...</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">15</a></div>
+              <div class="pagination-btn arrow-forward"><a class="pagination-btn__link" href="#"><img src="../../../static/img/arrow_forward_white.svg" alt=""></a></div>
+            </div>
+            <p class="pagination__text">1 – 12 из 100+ вариантов аренды</p>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer shadow">
+        <div class="site-footer-top">
+          <div class="site-footer__toxin"><img src="../../../static/img/logo.svg" alt="toxin">
+            <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+          </div>
+                <div class="site-footer__links"><a href="">навигация</a><a href="">О нас</a><a href="">Новости</a><a href="">Служба поддержки</a><a href="">Услуги</a></div>
+                <div class="site-footer__links"><a href="">о нас</a><a href="">О сервисе</a><a href="">Наша команда</a><a href="">Вакансии</a><a href="">Инвесторы</a></div>
+                <div class="site-footer__links"><a href="">Служба поддержки</a><a href="">Соглашения</a><a href="">Сообщества</a><a href="">Связь с нами</a><a href=""></a></div>
+          <div class="site-footer__subscribe">
+            <p>Подписка</p>
+            <p>Получайте специальные предложения и новости сервиса</p>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="Email" id="email"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" src="../../../static/img/arrow_forward_purple.svg" alt=""/></button>
+            </div>
+          </div>
+        </div>
+        <div class="site-footer-bottom">
+          <p class="site-footer__copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
+          <div class="site-footer__social-links"><a href="#"><img src="../../../static/img/twitter.svg" alt=""></a><a href="#"><img src="../../../static/img/facebook.svg" alt=""></a><a href="#"><img src="../../../static/img/instagram.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

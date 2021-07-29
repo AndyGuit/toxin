@@ -1,4 +1,4 @@
-prepros.config
-/dist
-/src/css
-/src/html
+# prepros.config
+# /dist
+# /src/css
+# /src/html

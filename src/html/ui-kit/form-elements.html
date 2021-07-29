@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Form Elements</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo"><img class="logo__icon" src="../../../static/img/icon.svg"></div>
+      <div class="content">
+        <div class="input-section">
+          <div class="element-header">
+            <label class="element-header__head" for="text-field-default">text field</label>
+            <label class="element-header__text" for="text-field-default">default</label>
+          </div>
+          <div class="border">
+            <input class="element-input__textfield" type="text" placeholder="Email" id="email"/>
+            <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head" for="text-field-hover">text field</label>
+            <label class="element-header__text" for="text-field-hover">hover / focus</label>
+          </div>
+          <div class="border">
+            <input class="element-input__textfield" type="text" id="text" value="This is pretty awesome"/>
+            <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head" for="">dropdown</label>
+            <label class="element-header__text" for=""></label>
+          </div>
+          <div class="border-dropdown">
+            <label class="dropdown-menu__head" for="drop">Сколько гостей
+              <label class="dropdown-menu__arrow" for="drop">
+                <input class="dropdown-menu__checkbox" type="checkbox" id="drop"/><span class="dropdown-menu__button"></span>
+              </label>
+            </label>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head" for="text-field-masked">masked text field</label>
+            <label class="element-header__text" for="text-field-masked"></label>
+          </div>
+          <div class="border">
+            <input class="element-input__textfield" type="text" placeholder="ДД.ММ.ГГГГ" id="text"/>
+            <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+          </div>
+          <div class="margin20"></div>
+          <div class="dropdown-date-wrapper">
+            <div class="dropdown-date">
+              <div class="element-header">
+                <label class="element-header__head" for="">date Dropdown</label>
+                <label class="element-header__text" for=""></label>
+              </div>
+              <div class="border-dropdown">
+                <label class="dropdown-menu__head" for="date-dropdown">ДД.ММ.ГГГГ
+                  <label class="dropdown-menu__arrow" for="date-dropdown">
+                    <input class="dropdown-menu__checkbox" type="checkbox" id="date-dropdown"/><span class="dropdown-menu__button"></span>
+                  </label>
+                </label>
+              </div>
+            </div>
+            <div class="dropdown-date">
+              <div class="element-header">
+                <label class="element-header__head" for="">date Dropdown</label>
+                <label class="element-header__text" for=""></label>
+              </div>
+              <div class="border-dropdown">
+                <label class="dropdown-menu__head" for="date-dropdown-2">19.08.2019
+                  <label class="dropdown-menu__arrow" for="date-dropdown-2">
+                    <input class="dropdown-menu__checkbox" type="checkbox" id="date-dropdown-2"/><span class="dropdown-menu__button"></span>
+                  </label>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="w267">
+            <div class="margin20"></div>
+            <div class="element-header">
+              <label class="element-header__head" for="filter-dropdown">filter-rate-dropdown</label>
+              <label class="element-header__text" for="filter-dropdown"></label>
+            </div>
+            <div class="border-dropdown">
+              <label class="dropdown-menu__head" for="filter-dropdown">19 авг - 23 авг
+                <label class="dropdown-menu__arrow" for="filter-dropdown">
+                  <input class="dropdown-menu__checkbox" type="checkbox" id="filter-dropdown"/><span class="dropdown-menu__button"></span>
+                </label>
+              </label>
+            </div>
+            <div class="margin20"></div>
+            <div class="element-header">
+              <label class="element-header__head" for="text-field-default">subscription text field</label>
+              <label class="element-header__text" for="text-field-default"></label>
+            </div>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="Email" id="email"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" src="../../../static/img/arrow_forward_purple.svg" alt=""/></button>
+            </div>
+            <div class="margin76"></div>
+            <div class="element-header">
+              <label class="element-header__head" for="">dropdown</label>
+              <label class="element-header__text" for="">default</label>
+            </div>
+            <div class="border-dropdown">
+              <label class="dropdown-menu__head" for="dropdown-default">2 спальни, 2 кровати...
+                <label class="dropdown-menu__arrow" for="dropdown-default">
+                  <input class="dropdown-menu__checkbox" type="checkbox" id="dropdown-default"/><span class="dropdown-menu__button"></span>
+                </label>
+              </label>
+            </div>
+            <div class="element-header">
+              <label class="element-header__head" for="">dropdown</label>
+              <label class="element-header__text" for="">expanded</label>
+            </div>
+            <div class="border-dropdown shadow">
+              <label class="dropdown-menu__head" for="dropdown-default-expand">2 спальни, 2 кровати...
+                <label class="dropdown-menu__arrow" for="dropdown-default-expand">
+                  <input class="dropdown-menu__checkbox" type="checkbox" id="dropdown-default-expand"/><span class="dropdown-menu__button"></span>
+                </label>
+              </label>
+              <div class="dropdown-menu-list">
+                <ul class="dropdown-menu__ul">
+                  <li class="dropdown-menu__item"><span>спальни</span>
+                    <div class="dropdown-menu__buttons">
+                      <button class="dropdown-menu__btn-minus">-</button><span>2</span>
+                      <button class="dropdown-menu__btn-plus">+</button>
+                    </div>
+                  </li>
+                  <li class="dropdown-menu__item"><span>кровати</span>
+                    <div class="dropdown-menu__buttons">
+                      <button class="dropdown-menu__btn-minus">-</button><span>2</span>
+                      <button class="dropdown-menu__btn-plus">+</button>
+                    </div>
+                  </li>
+                  <li class="dropdown-menu__item"><span>ванные комнаты</span>
+                    <div class="dropdown-menu__buttons">
+                      <button class="dropdown-menu__btn-minus">-</button><span>0</span>
+                      <button class="dropdown-menu__btn-plus">+</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="margin51"></div>
+            <div class="checkbox-expand">
+              <label class="checkbox-expand__header" for="expand-checkbox">expandable checkbox list</label>
+              <input class="checkbox-expand__checkbox" type="checkbox" id="expand-checkbox"/><img class="checkbox-expand__button" src="../../../static/img/dropdown_arrow.svg" alt="arrow"/>
+              <ul class="checkbox-expand__list">
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="breakfast"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="breakfast">Завтрак</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="table" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="table">Письменный стол</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="chair" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="chair">Стул для кормления</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="childbed" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="childbed">Кроватка</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="tx1"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="tx1">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="shampoo1"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="shampoo1">Шампунь</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="tv2"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="tv2">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="shampoo2"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="shampoo2">Шампунь</label>
+                </li>
+              </ul>
+            </div>
+            <div class="margin42"></div>
+            <div class="checkbox-expand">
+              <label class="checkbox-expand__header" for="expand-checkbox1">expandable checkbox list</label>
+              <input class="checkbox-expand__checkbox" type="checkbox" id="expand-checkbox1" checked="checked"/><img class="checkbox-expand__button" src="../../../static/img/dropdown_arrow.svg" alt="arrow"/>
+              <ul class="checkbox-expand__list">
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="breakfast1"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="breakfast1">Завтрак</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="table1" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="table1">Письменный стол</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="chair1" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="chair1">Стул для кормления</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="childbed1" checked="checked"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="childbed1">Кроватка</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="tx11"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="tx11">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="shampoo11"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="shampoo11">Шампунь</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="tv21"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="tv21">Телевизор</label>
+                </li>
+                <li class="checkbox">
+                  <input class="checkbox__checkbox" type="checkbox" id="shampoo21"/><span class="checkbox__new-checkbox"></span>
+                  <label class="checkbox__label" for="shampoo21">Шампунь</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="specials">
+            <div class="specials__element">
+              <div class="specials__img"><img src="../../../static/img/emoticon.svg" alt=""/></div>
+              <div class="specials__description">
+                <h1 class="specials__header">Комфорт</h1>
+                <p class="specials__text">Шумопоглощающие стены</p>
+              </div>
+            </div>
+            <div class="specials__element">
+              <div class="specials__img"><img src="../../../static/img/city.svg" alt=""/></div>
+              <div class="specials__description">
+                <h1 class="specials__header">Удобство</h1>
+                <p class="specials__text">Окно в каждой из спален</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="middle-section">
+          <div class="element-header">
+            <label class="element-header__head">checkbox buttons</label>
+            <label class="element-header__text"></label>
+          </div>
+          <ul style="padding: 0; margin: 8px, 0, 0">
+            <li class="checkbox">
+              <input class="checkbox__checkbox" type="checkbox" id="smoking"/><span class="checkbox__new-checkbox"></span>
+              <label class="checkbox__label" for="smoking">Можно курить</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox__checkbox" type="checkbox" id="pets" checked="checked"/><span class="checkbox__new-checkbox"></span>
+              <label class="checkbox__label" for="pets">Можно с питомцами</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox__checkbox" type="checkbox" id="guest" checked="checked"/><span class="checkbox__new-checkbox"></span>
+              <label class="checkbox__label" for="guest">Можно пригласить гостей (до 10 человек)</label>
+            </li>
+          </ul>
+          <div class="margin22"></div>
+          <div class="element-header">
+            <label class="element-header__head">radio buttons</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="radio-buttons">
+            <div class="radio-buttons__element">
+              <input type="radio" id="male" name="gender" checked="checked"/><span class="radio-buttons__btn"></span>
+              <label class="radio-buttons__label" for="male">Мужчина</label>
+            </div>
+            <div class="radio-buttons__element">
+              <input type="radio" id="female" name="gender"/><span class="radio-buttons__btn"></span>
+              <label class="radio-buttons__label" for="female">Женщина</label>
+            </div>
+          </div>
+          <div class="margin16"></div>
+          <div class="element-header">
+            <label class="element-header__head">toggle</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="toggle">
+            <div class="toggle__element">
+              <input class="toggle__checkbox" type="checkbox" id="toggle" checked="checked"/><span class="toggle__btn"></span><span class="toggle__dot"></span>
+              <label class="toggle__label" for="toggle">Получать спецпредложения</label>
+            </div>
+            <div class="toggle__element">
+              <input class="toggle__checkbox" type="checkbox" id="toggle1"/><span class="toggle__btn"></span><span class="toggle__dot"></span>
+              <label class="toggle__label" for="toggle1">Получать спецпредложения</label>
+            </div>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head">like button</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="like-button">
+            <div class="like-button__element">
+              <input class="like-button__checkbox" type="checkbox" id="like1"/><span class="like-button__border"></span><span class="like-button__heart"></span><span class="like-button__number">2</span>
+            </div>
+            <div class="like-button__element">
+              <input class="like-button__checkbox" type="checkbox" id="like2" checked="checked"/><span class="like-button__border"></span><span class="like-button__heart"></span><span class="like-button__number">12</span>
+            </div>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head">rate button</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="star-rating__wrapper">
+            <div class="star-rating__element">
+              <input type="radio" name="rate-btn1" id="star05"/>
+              <label for="star05"></label>
+              <input type="radio" name="rate-btn1" id="star04" checked="checked"/>
+              <label for="star04"></label>
+              <input type="radio" name="rate-btn1" id="star03"/>
+              <label for="star03"></label>
+              <input type="radio" name="rate-btn1" id="star02"/>
+              <label for="star02"></label>
+              <input type="radio" name="rate-btn1" id="star01"/>
+              <label for="star01"></label>
+            </div>
+            <div class="star-rating__element">
+              <input type="radio" name="rate-btn2" id="star15" checked="checked"/>
+              <label for="star15"></label>
+              <input type="radio" name="rate-btn2" id="star14"/>
+              <label for="star14"></label>
+              <input type="radio" name="rate-btn2" id="star13"/>
+              <label for="star13"></label>
+              <input type="radio" name="rate-btn2" id="star12"/>
+              <label for="star12"></label>
+              <input type="radio" name="rate-btn2" id="star11"/>
+              <label for="star11"></label>
+            </div>
+          </div>
+          <div class="margin173"></div>
+          <div class="element-header">
+            <label class="element-header__head">dropdown</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="border-dropdown shadow">
+            <label class="dropdown-menu__head" for="dropdown">Сколько гостей
+              <label class="dropdown-menu__arrow" for="dropdown">
+                <input class="dropdown-menu__checkbox" type="checkbox" id="dropdown"/><span class="dropdown-menu__button"></span>
+              </label>
+            </label>
+            <div class="dropdown-menu-list">
+              <ul class="dropdown-menu__ul">
+                <li class="dropdown-menu__item"><span>взрослые</span>
+                  <div class="dropdown-menu__buttons">
+                    <button class="dropdown-menu__btn-minus">-</button><span>0</span>
+                    <button class="dropdown-menu__btn-plus">+</button>
+                  </div>
+                </li>
+                <li class="dropdown-menu__item"><span>дети</span>
+                  <div class="dropdown-menu__buttons">
+                    <button class="dropdown-menu__btn-minus">-</button><span>0</span>
+                    <button class="dropdown-menu__btn-plus">+</button>
+                  </div>
+                </li>
+                <li class="dropdown-menu__item"><span>младенцы</span>
+                  <div class="dropdown-menu__buttons">
+                    <button class="dropdown-menu__btn-minus">-</button><span>0</span>
+                    <button class="dropdown-menu__btn-plus">+</button>
+                  </div>
+                </li>
+                <div class="dropdown-menu-list-bottom-btn">
+                  <button class="dropdown-menu-list-bottom-btn__clear" type="submit">очистить</button>
+                  <button class="dropdown-menu-list-bottom-btn__accept" type="submit">применить</button>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="margin78"></div>
+          <div class="element-header">
+            <label class="element-header__head">rich checkbox buttons</label>
+            <label class="element-header__text"></label>
+          </div>
+          <ul class="rich-checkbox">
+            <li class="rich-checkbox__element">
+              <div class="rich-checkbox__checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="corridor"/><span class="checkbox__new-checkbox"></span>
+              </div>
+              <div class="rich-checkbox__text">
+                <label class="rich-checkbox__header" for="corridor">Широкий коридор</label>
+                <p class="rich-checkbox__label">Ширина коридоров в номере не менее 91 см.</p>
+              </div>
+            </li>
+            <li class="rich-checkbox__element">
+              <div class="rich-checkbox__checkbox">
+                <input class="checkbox__checkbox" type="checkbox" id="disabledPeople"/><span class="checkbox__new-checkbox"></span>
+              </div>
+              <div class="rich-checkbox__text">
+                <label class="rich-checkbox__header" for="disabledPeople">Помощник для инвалидов</label>
+                <p class="rich-checkbox__label">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="review-wrapper">
+            <div class="review-header">
+              <div class="review-header__img"><img src="../../../static/img/review-user1.svg"/></div>
+              <div class="review-header__head">
+                <p class="review-header__name">Мурад Сарафанов</p>
+                <p class="review-header__date">5 дней назад</p>
+              </div>
+            </div>
+            <div class="review-footer">
+              <div class="like-button__element">
+                <input class="like-button__checkbox" type="checkbox" id="like-03" checked="checked"/><span class="like-button__border"></span><span class="like-button__heart"></span><span class="like-button__number">12</span>
+              </div>
+              <p class="review-footer__text-review">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="range-slider">
+            <div class="element-header">
+              <label class="element-header__head">Range Slider</label>
+              <label class="element-header__text">5 000₽ - 10 000₽</label>
+            </div>
+            <input type="range">
+          </div>
+          <div class="buttons">
+            <div class="element-header">
+              <label class="element-header__head">buttons</label>
+              <label class="element-header__text"></label>
+            </div>
+            <div class="button-wrapper">
+              <button class="btn-click-me__btn" type="submit">Click Me</button>
+              <button class="btn-click-me__btn_active" type="submit">Click Me</button>
+            </div>
+            <div class="button-wrapper">
+              <button class="btn-click-me__btn-border" type="submit">Click Me</button>
+              <button class="btn-click-me__btn-border" type="submit">Click Me</button>
+            </div>
+            <button class="btn-click-me__btn-simple" type="submit">Click Me</button>
+            <button class="btn-click-me__btn-simple" type="submit">Click Me</button>
+            <div class="margin30"></div>
+            <button class="btn-click-me__btn-sale" type="submit">перейти к оплате</button>
+          </div>
+          <div class="pagination">
+            <div class="element-header">
+              <label class="element-header__head">pagination</label>
+              <label class="element-header__text"></label>
+            </div>
+            <div class="pagination-wrapper">
+              <div class="pagination-btn arrow-backward"><a class="pagination-btn__link" href="#"><img src="../../../static/img/arrow_forward_white.svg" alt=""></a></div>
+              <div class="pagination-btn active-link"><a class="pagination-btn__link" href="#">1</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">2</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">3</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">...</a></div>
+              <div class="pagination-btn"><a class="pagination-btn__link" href="#">15</a></div>
+              <div class="pagination-btn arrow-forward"><a class="pagination-btn__link" href="#"><img src="../../../static/img/arrow_forward_white.svg" alt=""></a></div>
+            </div>
+            <p class="pagination__text">1 – 12 из 100+ вариантов аренды</p>
+          </div>
+          <div class="element-header">
+            <label class="element-header__head">dropdown</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="border-dropdown shadow">
+            <label class="dropdown-menu__head" for="dropdown3">3 гостя
+              <label class="dropdown-menu__arrow" for="dropdown3">
+                <input class="dropdown-menu__checkbox" type="checkbox" id="dropdown3"/><span class="dropdown-menu__button"></span>
+              </label>
+            </label>
+            <div class="dropdown-menu-list">
+              <ul class="dropdown-menu__ul">
+                <li class="dropdown-menu__item"><span>взрослые</span>
+                  <div class="dropdown-menu__buttons">
+                    <button class="dropdown-menu__btn-minus">-</button><span>2</span>
+                    <button class="dropdown-menu__btn-plus">+</button>
+                  </div>
+                </li>
+                <li class="dropdown-menu__item"><span>дети</span>
+                  <div class="dropdown-menu__buttons">
+                    <button class="dropdown-menu__btn-minus">-</button><span>1</span>
+                    <button class="dropdown-menu__btn-plus">+</button>
+                  </div>
+                </li>
+                <li class="dropdown-menu__item"><span>младенцы</span>
+                  <div class="dropdown-menu__buttons">
+                    <button class="dropdown-menu__btn-minus">-</button><span>0</span>
+                    <button class="dropdown-menu__btn-plus">+</button>
+                  </div>
+                </li>
+                <div class="dropdown-menu-list-bottom-btn">
+                  <button class="dropdown-menu-list-bottom-btn__clear" type="submit">очистить</button>
+                  <button class="dropdown-menu-list-bottom-btn__accept" type="submit">применить</button>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="margin78"></div>
+          <div class="element-header">
+            <label class="element-header__head">bullet list</label>
+            <label class="element-header__text"></label>
+          </div>
+          <div class="bullet-list">
+            <ul class="bullet-list__list">
+              <li class="bullet-list__element">Нельзя с питомцами</li>
+              <li class="bullet-list__element">Без вечеринок и мероприятий</li>
+              <li class="bullet-list__element">Время прибытия — после 13:00, а выезд до 12:00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

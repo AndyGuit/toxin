@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Cards</title>
+  </head>
+  <body class="body-grey">
+    <div class="container">
+      <div class="logo"><img class="logo__icon" src="../../../static/img/icon.svg"></div>
+      <div class="content">
+        <div class="cards1">
+          <div class="card-wrapper shadow">
+            <h1 class="card-header">Найдём номера под ваши пожелания</h1>
+            <div class="dropdown-date-wrapper">
+              <div class="dropdown-date">
+                <div class="element-header">
+                  <label class="element-header__head" for="">прибытие</label>
+                  <label class="element-header__text" for=""></label>
+                </div>
+                <div class="border-dropdown">
+                  <label class="dropdown-menu__head" for="date-dropdown">ДД.ММ.ГГГГ
+                    <label class="dropdown-menu__arrow" for="date-dropdown">
+                      <input class="dropdown-menu__checkbox" type="checkbox" id="date-dropdown"/><span class="dropdown-menu__button"></span>
+                    </label>
+                  </label>
+                </div>
+              </div>
+              <div class="dropdown-date">
+                <div class="element-header">
+                  <label class="element-header__head" for="">выезд</label>
+                  <label class="element-header__text" for=""></label>
+                </div>
+                <div class="border-dropdown">
+                  <label class="dropdown-menu__head" for="date-dropdown-2">ДД.ММ.ГГГГ
+                    <label class="dropdown-menu__arrow" for="date-dropdown-2">
+                      <input class="dropdown-menu__checkbox" type="checkbox" id="date-dropdown-2"/><span class="dropdown-menu__button"></span>
+                    </label>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="element-header">
+              <label class="element-header__head" for="">гости</label>
+              <label class="element-header__text" for=""></label>
+            </div>
+            <div class="border-dropdown">
+              <label class="dropdown-menu__head" for="drop">Сколько гостей
+                <label class="dropdown-menu__arrow" for="drop">
+                  <input class="dropdown-menu__checkbox" type="checkbox" id="drop"/><span class="dropdown-menu__button"></span>
+                </label>
+              </label>
+            </div>
+            <div class="margin27"></div>
+            <button class="btn-click-me__btn-sale" type="submit">подобрать номер</button>
+          </div>
+          <div class="card-wrapper shadow">
+            <h1 class="card-header">Регистрация аккаунта</h1>
+            <div class="margin22"></div>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="Имя"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="margin10"></div>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="Фамилия"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="radio-buttons">
+              <div class="radio-buttons__element">
+                <input type="radio" id="male" name="gender" checked="checked"/><span class="radio-buttons__btn"></span>
+                <label class="radio-buttons__label" for="male">Мужчина</label>
+              </div>
+              <div class="radio-buttons__element">
+                <input type="radio" id="female" name="gender"/><span class="radio-buttons__btn"></span>
+                <label class="radio-buttons__label" for="female">Женщина</label>
+              </div>
+            </div>
+            <div class="element-header">
+              <label class="element-header__head">дата рождения</label>
+              <label class="element-header__text"></label>
+            </div>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="ДД.ММ.ГГГГ"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="element-header">
+              <label class="element-header__head">данные для входа в сервис</label>
+              <label class="element-header__text"></label>
+            </div>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="Email"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="margin10"></div>
+            <div class="border">
+              <input class="element-input__textfield" type="password" placeholder="Пароль"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="toggle">
+              <div class="toggle__element">
+                <input class="toggle__checkbox" type="checkbox" id="toggle1"/><span class="toggle__btn"></span><span class="toggle__dot"></span>
+                <label class="toggle__label" for="toggle1">Получать спецпредложения</label>
+              </div>
+            </div>
+            <button class="btn-click-me__btn-sale" type="submit">перейти к оплате</button>
+            <div class="margin27"></div>
+            <div class="sign-in-wrapper"><a class="sign-up-already">Уже есть аккаунт на Toxin</a>
+              <button class="btn-click-me__btn-border" type="submit">войти</button>
+            </div>
+          </div>
+        </div>
+        <div class="cards2">
+          <div class="card-wrapper shadow">
+            <div class="number-info-header">
+              <h1 class="number-info-header__number">888</h1>
+              <p class="number-info-header__price">9 990₽<span class="number-info-header__per-day"> в сутки</span></p>
+            </div>
+            <div class="dropdown-date-wrapper">
+              <div class="dropdown-date">
+                <div class="element-header">
+                  <label class="element-header__head" for="arrival">прибытие</label>
+                  <label class="element-header__text" for="arrival"></label>
+                </div>
+                <div class="border-dropdown">
+                  <label class="dropdown-menu__head" for="arrival">19.08.2019
+                    <label class="dropdown-menu__arrow" for="arrival">
+                      <input class="dropdown-menu__checkbox" type="checkbox" id="arrival"/><span class="dropdown-menu__button"></span>
+                    </label>
+                  </label>
+                </div>
+              </div>
+              <div class="dropdown-date">
+                <div class="element-header">
+                  <label class="element-header__head" for="departure">выезд</label>
+                  <label class="element-header__text" for="departure"></label>
+                </div>
+                <div class="border-dropdown">
+                  <label class="dropdown-menu__head" for="departure">23.08.2019
+                    <label class="dropdown-menu__arrow" for="departure">
+                      <input class="dropdown-menu__checkbox" type="checkbox" id="departure"/><span class="dropdown-menu__button"></span>
+                    </label>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="element-header">
+              <label class="element-header__head" for="">гости</label>
+              <label class="element-header__text" for=""></label>
+            </div>
+            <div class="border-dropdown">
+              <label class="dropdown-menu__head" for="drop2">3 гостя
+                <label class="dropdown-menu__arrow" for="drop2">
+                  <input class="dropdown-menu__checkbox" type="checkbox" id="drop2"/><span class="dropdown-menu__button"></span>
+                </label>
+              </label>
+            </div>
+            <div class="number-price-info">
+              <div class="number-price-info__element">
+                <p class="number-price-info__sum">9 990₽ х 4 суток</p>
+                <p class="number-price-info__price">39 960₽</p>
+              </div>
+              <div class="number-price-info__element">
+                <p class="number-price-info__service-charge">Сбор за услуги: скидка 2 179₽<img class="number-price-info__info" src="../../../static/img/info.svg"></p>
+                <p class="number-price-info__price">0₽</p>
+              </div>
+              <div class="number-price-info__element">
+                <p class="number-price-info__service-charge">Сбор за дополнительные услуги<img class="number-price-info__info" src="../../../static/img/info.svg"></p>
+                <p class="number-price-info__price">300₽</p>
+              </div>
+              <div class="number-price-info__element">
+                <p class="number-price-info__total-word">Итого</p>
+                <div class="dot-border"></div>
+                <p class="number-price-info__total-price">38 081₽</p>
+              </div>
+            </div>
+            <button class="btn-click-me__btn-sale" type="submit">забронировать</button>
+          </div>
+          <div class="card-wrapper shadow">
+            <h1 class="card-header">Войти</h1>
+            <div class="margin22"></div>
+            <div class="border">
+              <input class="element-input__textfield" type="text" placeholder="Email"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="margin10"></div>
+            <div class="border">
+              <input class="element-input__textfield" type="password" placeholder="Пароль"/>
+              <button class="element-input__btn" type="submit"><img class="element-input__img" alt=""/></button>
+            </div>
+            <div class="margin20"></div>
+            <button class="btn-click-me__btn-sale" type="submit">войти</button>
+            <div class="margin31"></div>
+            <div class="sign-in-wrapper"><a class="sign-up-already">Нет аккаунта на Toxin?</a>
+              <button class="btn-click-me__btn-border" type="submit">создать</button>
+            </div>
+          </div>
+        </div>
+        <div class="cards3">
+          <div class="card-date-picker">
+            <div class="card-date-picker__header">
+              <button class="card-date-picker__arrow-back"></button>
+              <p class="card-date-picker__month">Август 2019</p>
+              <button class="card-date-picker__arrow-forward" src="../../../../static/img/arrow_forward_purple.svg"></button>
+            </div>
+            <div class="card-date-picker__week-wrap">
+              <div class="card-date-picker__day"> 
+                <p>Пн</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>Вт</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>Ср</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>Чт</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>Пт</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>Сб</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>Вс</p>
+              </div>
+            </div>
+            <div class="card-date-picker__day-wrap">
+              <div class="card-date-picker__day"> 
+                <p class="card-date-picker__day-wrap_ds25">29</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p class="card-date-picker__day-wrap_ds25">30</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p class="card-date-picker__day-wrap_ds25">31</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>1</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>2</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>3</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>4</p>
+              </div>
+            </div>
+            <div class="card-date-picker__day-wrap">
+              <div class="card-date-picker__day"> 
+                <p>5</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>6</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>7</p>
+              </div>
+              <div class="card-date-picker__day datepick-element-background__green"> 
+                <p>8</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>9</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>10</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>11</p>
+              </div>
+            </div>
+            <div class="card-date-picker__day-wrap">
+              <div class="card-date-picker__day"> 
+                <p>12</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>13</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>14</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>15</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>16</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>17</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>18</p>
+              </div>
+            </div>
+            <div class="card-date-picker__day-wrap">
+              <div class="card-date-picker__day datepick-element-background__purple before-date"> 
+                <p>19</p>
+              </div>
+              <div class="card-date-picker__day datepick-element-background__purpleOp"> 
+                <p>20</p>
+              </div>
+              <div class="card-date-picker__day datepick-element-background__purpleOp"> 
+                <p>21</p>
+              </div>
+              <div class="card-date-picker__day datepick-element-background__purpleOp"> 
+                <p>22</p>
+              </div>
+              <div class="card-date-picker__day datepick-element-background__purple after-date"> 
+                <p>23</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>24</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>25</p>
+              </div>
+            </div>
+            <div class="card-date-picker__day-wrap">
+              <div class="card-date-picker__day"> 
+                <p>26</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>27</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>28</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>29</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>30</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p>31</p>
+              </div>
+              <div class="card-date-picker__day"> 
+                <p class="card-date-picker__day-wrap_ds25">1</p>
+              </div>
+            </div>
+            <div class="card-date-picker__bottom-btn">
+              <button class="dropdown-menu-list-bottom-btn__clear" type="submit">очистить</button>
+              <button class="dropdown-menu-list-bottom-btn__accept" type="submit">применить</button>
+            </div>
+          </div>
+          <div class="card-room shadow">
+            <div class="card-room__picture"><img src="../../../static/img/room1.png" alt=""/>
+              <div class="card-room__prev"></div>
+              <div class="card-room__picture-select">
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select888" checked="checked"/><span></span>
+                </div>
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select888"/><span></span>
+                </div>
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select888"/><span></span>
+                </div>
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select888"/><span></span>
+                </div>
+              </div>
+              <div class="card-room__next"></div>
+            </div>
+            <div class="card-room__info">
+              <div class="number-info-header">
+                <h1 class="number-info-header__number">888</h1>
+                <p class="number-info-header__price">9 990₽<span class="number-info-header__per-day"> в сутки</span></p>
+              </div>
+              <hr class="card-room__hr"/>
+              <div class="card-room__rating">
+                <div class="star-rating__element">
+                  <input type="radio" name="rate-btn888" id="star05-888" checked="checked"/>
+                  <label for="star05-888"></label>
+                  <input type="radio" name="rate-btn888" id="star04-888"/>
+                  <label for="star04-888"></label>
+                  <input type="radio" name="rate-btn888" id="star03-888"/>
+                  <label for="star03-888"></label>
+                  <input type="radio" name="rate-btn888" id="star02-888"/>
+                  <label for="star02-888"></label>
+                  <input type="radio" name="rate-btn888" id="star01-888"/>
+                  <label for="star01-888"></label>
+                </div>
+                <p class="card-room__reviews"><span>145</span> Отзывов</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-room shadow">
+            <div class="card-room__picture"><img src="../../../static/img/room2.png" alt=""/>
+              <div class="card-room__prev"></div>
+              <div class="card-room__picture-select">
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select840" checked="checked"/><span></span>
+                </div>
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select840"/><span></span>
+                </div>
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select840"/><span></span>
+                </div>
+                <div class="card-room__picture-select-btn">
+                  <input type="radio" name="picture-select840"/><span></span>
+                </div>
+              </div>
+              <div class="card-room__next"></div>
+            </div>
+            <div class="card-room__info">
+              <div class="number-info-header">
+                <h1 class="number-info-header__number">840</h1>
+                <p class="number-info-header__price">9 900₽<span class="number-info-header__per-day"> в сутки</span></p>
+              </div>
+              <hr class="card-room__hr"/>
+              <div class="card-room__rating">
+                <div class="star-rating__element">
+                  <input type="radio" name="rate-btn840" id="star05-840" checked="checked"/>
+                  <label for="star05-840"></label>
+                  <input type="radio" name="rate-btn840" id="star04-840"/>
+                  <label for="star04-840"></label>
+                  <input type="radio" name="rate-btn840" id="star03-840"/>
+                  <label for="star03-840"></label>
+                  <input type="radio" name="rate-btn840" id="star02-840"/>
+                  <label for="star02-840"></label>
+                  <input type="radio" name="rate-btn840" id="star01-840"/>
+                  <label for="star01-840"></label>
+                </div>
+                <p class="card-room__reviews"><span>65</span> Отзывов</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
